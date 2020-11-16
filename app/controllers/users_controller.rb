@@ -17,7 +17,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+    flash[:message] = "#{params[:id]} is not a valid guest"
+    render "partials/error" if !@user
   end
 
   private
