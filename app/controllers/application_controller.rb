@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   private
 
+  def redirect_anon_users_to_home
+    redirect_to root_path unless authenticated
+  end
+
   def authenticated
     !!current_user
   end
