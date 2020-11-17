@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_200516) do
+ActiveRecord::Schema.define(version: 2020_11_17_201135) do
 
   create_table "exhibits", force: :cascade do |t|
     t.string "name"
     t.string "biome"
-    t.string "image_url"
+    t.string "image_url", default: "https://www.drupal.org/files/issues/2019-07-21/missing.png"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
