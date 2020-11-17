@@ -21,5 +21,6 @@ User.create(
 Exhibit.create(
   name: "Central Garden & Sea Lion Pool",
   biome: "Pacific Ocean coastline",
-  image_url: "https://www.cooperation.com.au/Photo%20Albums/Canada-NYC%202006/10%20-%20New%20York%20City/slides/Sea%20Lion%20Central%20Park%20Zoo.JPG"
+  image_url: "https://www.cooperation.com.au/Photo%20Albums/Canada-NYC%202006/10%20-%20New%20York%20City/slides/Sea%20Lion%20Central%20Park%20Zoo.JPG",
+  description: "At the heart of the park, our sea lion gang can be seen sunning themselves or swimming amidst the Manhattan skyline. The exhibit features both above and below water viewing of some of our most acrobat swimmers."
 )
