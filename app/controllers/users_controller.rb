@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :find_user, only: [:show]
+  before_action :redirect_already_logged_in, only: [:new]
 
   def new
     @user = User.new
