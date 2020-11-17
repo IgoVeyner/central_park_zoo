@@ -6,8 +6,10 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_already_logged_in
-    flash[:message] = "You are already logged in"
-    redirect_to user_path(current_user) if authenticated
+    if authenticated
+      flash[:message] = "You are already logged in"
+      redirect_to user_path(current_user)
+    end
   end
 
   def authenticated
