@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create', as: 'create_user'
 
   get '/login', to: 'session#new', as: 'login'
+  post '/login', to: 'session#create'
 
   get '/guest/:id', to: 'users#show', as: 'user'
 end
