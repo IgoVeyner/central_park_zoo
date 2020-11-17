@@ -1,4 +1,6 @@
 class ExhibitsController < ApplicationController
+  before_action :find_exhibit, only: [:show]
+
   def index
     @exhibits = Exhibit.all
   end
