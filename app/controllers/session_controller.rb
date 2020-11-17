@@ -1,9 +1,6 @@
 class SessionController < ApplicationController
   before_action :all_users, only: [:new]
 
-  def new
-  end
-
   def create
     @user = User.find_by_id(params[:user_name])
 
