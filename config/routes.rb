@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   match '/auth/:provider/callback', to: 'session#create', via: [:get, :post]
 
   get '/guest/:id', to: 'users#show', as: 'user'
+  get '/guests', to: 'users#index', as: 'users'
 end
