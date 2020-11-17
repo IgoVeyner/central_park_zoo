@@ -7,6 +7,7 @@ class SessionController < ApplicationController
       @user = User.find_or_create_by_omniauth(auth_hash)
       session[:user_id] = @user.id
 
+      flash[:message] = "Thanks for signing up via GitHub, we've added $100 to your funds, please set your birthdate at another time"
       redirect_to user_path(@user)
     else
       @user = User.find_by_id(params[:user_name])
