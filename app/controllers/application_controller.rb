@@ -19,4 +19,9 @@ class ApplicationController < ActionController::Base
   def current_user
     User.find_by_id(session[:user_id])
   end
+
+  def redirect_to_errors_page(class)
+    flash[:message] = "#{params[:id]} is not a valid #{class}"
+    render "partials/error"
+  end
 end
