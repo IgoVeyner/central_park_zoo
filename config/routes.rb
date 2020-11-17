@@ -5,13 +5,15 @@ Rails.application.routes.draw do
   
   get '/signup', to: 'users#new', as: 'signup'
   post '/signup', to: 'users#create', as: 'create_user'
-
+  
   get '/login', to: 'session#new', as: 'login'
   post '/login', to: 'session#create'
   post '/logout', to: 'session#destroy', as: 'logout'
-
+  
   match '/auth/:provider/callback', to: 'session#create', via: [:get, :post]
-
+  
   get '/guest/:id', to: 'users#show', as: 'user'
   get '/guests', to: 'users#index', as: 'users'
+
+  resources :exhibits, only: [:index, :show]
 end
