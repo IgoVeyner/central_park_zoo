@@ -8,6 +8,6 @@ class ExhibitsController < ApplicationController
   private 
 
   def find_exhibit
-    @exhibit = Exhibit.find_by_id[params[:id]]
+    @exhibit = Exhibit.find_by_id(params[:id])
   end 
 end
