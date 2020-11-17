@@ -1,7 +1,7 @@
 class SpeciesController < ApplicationController
 
   def index
-    @species = Species.all
+    @species_all = Species.all
   end
 
   private 
