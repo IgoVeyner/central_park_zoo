@@ -15,4 +15,10 @@ class SessionController < ApplicationController
       render :new
     end
   end
+
+  private
+
+  def all_users
+    @users = User.all
+  end
 end
