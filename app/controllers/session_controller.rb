@@ -3,15 +3,22 @@ class SessionController < ApplicationController
   before_action :redirect_already_logged_in, only: [:new]
 
   def create
-    @user = User.find_by_id(params[:user_name])
-
-    if @user && @user.authenticate(params[:password])
+    if auth_hash = request.env["omniauth.auth"]
+      @user = User.find_or_create_by_omniauth(auth_hash)
       session[:user_id] = @user.id
+
       redirect_to user_path(@user)
     else
-      flash[:message] = "Incorrect Password"
-      all_users
-      render :new
+      @user = User.find_by_id(params[:user_name])
+      
+      if @user && @user.authenticate(params[:password])
+        session[:user_id] = @user.id
+        redirect_to user_path(@user)
+      else
+        flash[:message] = "Incorrect Password"
+        all_users
+        render :new
+      end
     end
   end
 
