@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get '/login', to: 'session#new', as: 'login'
   post '/login', to: 'session#create'
 
+  match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+
   get '/guest/:id', to: 'users#show', as: 'user'
 end
