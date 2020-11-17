@@ -1,6 +1,7 @@
 class SessionController < ApplicationController
+  before_action :all_users, only: [:new]
+
   def new
-    @users = User.all
   end
 
   def create
@@ -11,7 +12,7 @@ class SessionController < ApplicationController
       redirect_to user_path(@user)
     else
       # add flash error message
-      @users = User.all
+      all_users
       render :new
     end
   end
