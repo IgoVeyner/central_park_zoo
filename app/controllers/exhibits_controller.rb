@@ -10,5 +10,10 @@ class ExhibitsController < ApplicationController
 
   def find_exhibit
     @exhibit = Exhibit.find_by_id(params[:id])
+
+    unless @exhibit
+      flash[:message] = "#{params[:id]} is not a valid exhibit"
+      render "partials/error"
+    end
   end 
 end
