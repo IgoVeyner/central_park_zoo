@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_16_173807) do
+ActiveRecord::Schema.define(version: 2020_11_17_200516) do
+
+  create_table "exhibits", force: :cascade do |t|
+    t.string "name"
+    t.string "biome"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
