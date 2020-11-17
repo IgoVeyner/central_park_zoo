@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_214457) do
+ActiveRecord::Schema.define(version: 2020_11_17_215633) do
 
   create_table "exhibits", force: :cascade do |t|
     t.string "name"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_11_17_214457) do
     t.string "name"
     t.string "common_name"
     t.string "conservation_status"
-    t.string "image_url"
+    t.string "image_url", default: "https://www.drupal.org/files/issues/2019-07-21/missing.png"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
