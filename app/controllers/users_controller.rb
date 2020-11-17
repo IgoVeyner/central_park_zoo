@@ -30,10 +30,6 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find_by_id(params[:id])
-    
-    unless @user
-      flash[:message] = "#{params[:id]} is not a valid guest"
-      render "partials/error"
-    end
+    redirect_to_errors_page(User.name) unless @user
   end
 end
