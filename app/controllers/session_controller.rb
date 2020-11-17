@@ -9,7 +9,7 @@ class SessionController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
-      # add flash error message
+      flash[:message] = "Incorrect Password"
       all_users
       render :new
     end
