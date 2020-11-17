@@ -30,6 +30,6 @@ Species.create(
   name: "Zalophus californianus",
   common_name: "California Sea Lion",
   conservation_status: "Least Concern",
-  image_url: "https://en.wikipedia.org/wiki/California_sea_lion#/media/File:California_sea_lion_in_La_Jolla_(70568).jpg",
+  image_url: "https://upload.wikimedia.org/wikipedia/commons/7/74/California_sea_lion_in_La_Jolla_%2870568%29.jpg",
   description: "The California sea lion (Zalophus californianus) is a coastal eared seal native to western North America. It is one of six species of sea lion. Its natural habitat ranges from southeast Alaska to central Mexico, including the Gulf of California. They mainly haul-out on sandy or rocky beaches, but they also frequent manmade environments such as marinas and wharves. Sea lions feed on a number of species of fish and squid, and are preyed on by killer whales and great white sharks."
 )
