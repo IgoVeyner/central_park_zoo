@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_path unless authenticated
   end
 
+  def redirect_already_logged_in
+    redirect_to user_path(current_user) if authenticated
+  end
+
   def authenticated
     !!current_user
   end
