@@ -1,0 +1,7 @@
+<h1>Our Exhibits</h1>
+
+<ul>
+  <% @exhibits.each do |exhibit| %>
+  <li><%= link_to  exhibit.name, exhibit_path(exhibit) %></li>
+  <% end %>
+</ul>
