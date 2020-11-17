@@ -18,13 +18,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    unless @user
-      flash[:message] = "#{params[:id]} is not a valid guest"
-      render "partials/error"
-    end
-  end
-
   def index
     @users = User.all
   end
@@ -37,5 +30,10 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find_by_id(params[:id])
+    
+    unless @user
+      flash[:message] = "#{params[:id]} is not a valid guest"
+      render "partials/error"
+    end
   end
 end
