@@ -13,7 +13,15 @@ class AnimalsController < ApplicationController
   end
 
   def show
-  
+    @exhibit = Exhibit.find_by_id(params[:exhibit_id])
+
+    if @exhibit 
+      @animal = @exhibit.animals.find_by_id(params[:id])
+      redirect_to_errors_page(Animal.name) unless @animal
+    else 
+      flash[:message] = "#{params[:exhibit_id]} is not a valid Exhibit"
+      render "partials/error"
+    end
   end
 
   private
