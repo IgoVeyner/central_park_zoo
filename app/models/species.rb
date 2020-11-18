@@ -1,4 +1,7 @@
 class Species < ApplicationRecord
+  has_many :animals
+  has_many :exhibits, through: :animals
+
   validates :name, presence: true
   validates :name, uniqueness: true
 

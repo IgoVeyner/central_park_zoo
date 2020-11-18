@@ -1,4 +1,7 @@
 class Exhibit < ApplicationRecord
+  has_many :animals
+  has_many :species, through: :animals
+
   validates :name, presence: true
   validates :name, uniqueness: true
 
