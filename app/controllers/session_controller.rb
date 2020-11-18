@@ -3,23 +3,15 @@ class SessionController < ApplicationController
   before_action :redirect_already_logged_in, only: [:new]
 
   def create
-    if auth_hash = request.env["omniauth.auth"]
-      @user = User.find_or_create_by_omniauth(auth_hash)
+    @user = User.find_by_id(params[:user_name])
+    
+    if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-
-      flash[:message] = "Thanks for signing up via GitHub, we've added $100 to your funds, please set your birthdate at another time"
       redirect_to user_path(@user)
     else
-      @user = User.find_by_id(params[:user_name])
-      
-      if @user && @user.authenticate(params[:password])
-        session[:user_id] = @user.id
-        redirect_to user_path(@user)
-      else
-        flash[:message] = "Incorrect Password"
-        all_users
-        render :new
-      end
+      flash[:message] = "Incorrect Password"
+      all_users
+      render :new
     end
   end
 
