@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_18_205115) do
+ActiveRecord::Schema.define(version: 2020_11_18_205519) do
 
   create_table "animals", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.integer "weight"
-    t.string "image_url"
+    t.string "image_url", default: "https://www.drupal.org/files/issues/2019-07-21/missing.png"
     t.string "description"
     t.integer "exhibit_id"
     t.integer "species_id"
