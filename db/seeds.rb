@@ -69,3 +69,23 @@ Animal.create(
   exhibit_id: seal_pool.id,
   species_id: seal.id
 )
+
+Animal.create(
+  name: "Tim",
+  age: rand(1..15),
+  weight: rand(3..30),
+  image_url: "https://newsroom.wcs.org/dnnimagehandler.ashx?mode=file&file=/Portals/164/_Julie%20Larsen%20Maher_9478_Macaroni%20Penguins_CPZ_06%2022%2017.JPG&w=785&h=500&resizemode=crop",
+  description: "Enjoys Swimming",
+  exhibit_id: polar_circle.id,
+  species_id: penguin.id
+)
+
+Animal.create(
+  name: "Samantha",
+  age: rand(1..15),
+  weight: rand(3..30),
+  image_url: "https://i.redd.it/47myk1xrx7bz.jpg",
+  description: "Enjoys eating fish",
+  exhibit_id: polar_circle.id,
+  species_id: penguin.id
+)
