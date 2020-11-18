@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   get '/guest/:id', to: 'users#show', as: 'user'
   get '/guests', to: 'users#index', as: 'users'
   
-  resources :exhibits, only: [:index, :show]
+  resources :exhibits, only: [:index, :show] do 
+    resources :species, only: [:index]
+  end
+
   resources :species, only: [:index, :show]
 end
