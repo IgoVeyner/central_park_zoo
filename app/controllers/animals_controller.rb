@@ -1,5 +1,6 @@
 class AnimalsController < ApplicationController
-  def index 
-    @animals = Exhibit.find_by_id(params[:exhibit_id]).animals
+  def index
+    @exhibit = Exhibit.find_by_id(params[:exhibit_id])
+    @animals = @exhibit.animals
   end
 end
