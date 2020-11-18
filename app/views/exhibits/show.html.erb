@@ -4,3 +4,6 @@
 
 <h2>Biome: <%= @exhibit.biome %></h2>
 <h3><%= @exhibit.description %></h3>
+
+<%= link_to  "Animals", exhibit_animals_path(@exhibit) %>
+<%= link_to  "Species", exhibit_species_index_path(@exhibit) %>
