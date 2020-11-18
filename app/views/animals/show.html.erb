@@ -1,0 +1,9 @@
+<h1><%= @animal.name %></h1>
+
+<img src="<%= @animal.image_url %>" alt="">
+
+<h2><%= @animal.age %> years old</h2>
+<h2><%= @animal.weight %> lbs.</h2>
+<h2>Species: <%= link_to @animal.species.name, species_path(@animal.species) %></h2>
+<h2>Exhibit: <%= link_to @animal.exhibit.name, exhibit_path(@animal.exhibit) %></h2>
+<h3><%= @animal.description %></h3>
