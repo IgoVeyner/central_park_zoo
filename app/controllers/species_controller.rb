@@ -4,7 +4,14 @@ class SpeciesController < ApplicationController
 
   def index
     if params[:exhibit_id]
-      @species_all = Exhibit.find_by_id(params[:exhibit_id]).species
+      @exhibit = Exhibit.find_by_id(params[:exhibit_id])
+
+      if @exhibit
+        @species_all = @exhibit.species
+      else
+        flash[:message] = "#{params[:exhibit_id]} is not a valid Exhibit"
+        render "partials/error"
+      end
     else
       @species_all = Species.all
     end
