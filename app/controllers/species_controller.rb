@@ -3,7 +3,11 @@ class SpeciesController < ApplicationController
   before_action :redirect_anon_users_to_home
 
   def index
-    @species_all = Species.all
+    if params[:exhibit_id]
+      @species_all = Exhibit.find_by_id(params[:exhibit_id]).species
+    else
+      @species_all = Species.all
+    end
   end
 
   private 
