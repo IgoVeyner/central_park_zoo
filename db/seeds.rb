@@ -44,3 +44,13 @@ Animal.create(
   exhibit_id: seal_pool.id,
   species_id: seal.id
 )
+
+Animal.create(
+  name: "Sam",
+  age: rand(1..20),
+  weight: rand(5..50),
+  image_url: "https://www.centralpark.com/downloads/1424/download/sea-lion-at-central-park-zoo.jpe?cb=783665e2e86dabe11fdbe675f24e26c4",
+  description: "A sweet boy. Loves to swim",
+  exhibit_id: seal_pool.id,
+  species_id: seal.id
+)
