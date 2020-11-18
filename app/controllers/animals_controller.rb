@@ -1,4 +1,6 @@
 class AnimalsController < ApplicationController
+  before_action :find_animal, only: [:show]
+
   def index
     @exhibit = Exhibit.find_by_id(params[:exhibit_id])
 
@@ -8,6 +10,10 @@ class AnimalsController < ApplicationController
       flash[:message] = "#{params[:exhibit_id]} is not a valid Exhibit"
       render "partials/error"
     end
+  end
+
+  def show
+  
   end
 
   private
