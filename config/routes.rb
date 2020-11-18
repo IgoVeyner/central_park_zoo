@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/login', to: 'session#create'
   post '/logout', to: 'session#destroy', as: 'logout'
   
-  match '/auth/:provider/callback', to: 'session#create', via: [:get, :post]
+  match '/auth/:github/callback', to: 'session#github_login', via: [:get, :post]
   
   get '/guest/:id', to: 'users#show', as: 'user'
   get '/guests', to: 'users#index', as: 'users'
