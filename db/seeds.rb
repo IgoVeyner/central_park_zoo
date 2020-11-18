@@ -25,6 +25,13 @@ seal_pool = Exhibit.create(
   description: "At the heart of the park, our sea lion gang can be seen sunning themselves or swimming amidst the Manhattan skyline. The exhibit features both above and below water viewing of some of our most acrobat swimmers."
 )
 
+polar_circle = Exhibit.create(
+  name: "Polar Circle",
+  biome: "Arctic",
+  image_url: "https://iamavig.files.wordpress.com/2017/08/central-park-zoo-penguins.jpg?w=1200",
+  description: "At the heart of Manhattan, this exhibit boasts harbor seals and birds from the ends of the earth. Penguins and puffins are a nice respite from the hustle and bustle."
+)
+
 # Species creation
 seal = Species.create(
   name: "Zalophus californianus",
@@ -39,7 +46,7 @@ penguin = Species.create(
   common_name: "Macaroni Penguin",
   conservation_status: "Vulnerable",
   image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/SGI-2016-South_Georgia_%28Cooper_Bay%29%E2%80%93Macaroni_penguin_%28Eudyptes_chrysolophus%29_01.jpg/825px-SGI-2016-South_Georgia_%28Cooper_Bay%29%E2%80%93Macaroni_penguin_%28Eudyptes_chrysolophus%29_01.jpg",
-  description: ""
+  description: "The macaroni penguin (Eudyptes chrysolophus) is a species of penguin found from the Subantarctic to the Antarctic Peninsula.  It bears a distinctive yellow crest, and the face and upperparts are black and sharply delineated from the white underparts."
 )
 
 # Animal creation
