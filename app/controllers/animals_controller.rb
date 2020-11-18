@@ -1,5 +1,6 @@
 class AnimalsController < ApplicationController
   before_action :find_animal, only: [:show]
+  before_action :redirect_anon_users_to_home
 
   def index
     @exhibit = Exhibit.find_by_id(params[:exhibit_id])
