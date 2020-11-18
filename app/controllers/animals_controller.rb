@@ -9,4 +9,11 @@ class AnimalsController < ApplicationController
       render "partials/error"
     end
   end
+
+  private
+
+  def find_animal
+    @animal = Animal.find_by_id(params[:id])
+    redirect_to_errors_page(Animal.name) unless @animal
+  end
 end
