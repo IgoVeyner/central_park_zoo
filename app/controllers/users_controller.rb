@@ -22,6 +22,16 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def most_donations
+    @user = User.new
+
+    User.all.each do |user|
+      @user = user if user.donations.count > @user.donations.count
+    end
+    
+    render :show
+  end
+
   private
 
   def user_params
