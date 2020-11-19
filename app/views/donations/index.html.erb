@@ -1,0 +1,17 @@
+<h1>Donations</h1>
+
+<ul>
+  <% @donations.each do |donation| %>
+    <li>
+      $<%= donation.amount %>
+
+      <% if params[:species_id] %>
+        by <%= link_to donation.user.name, user_path(donation.user) %>
+      <% else %>
+        to <%= link_to donation.species.name, species_path(donation.species) %>
+      <% end %>
+
+      <%= donation.created_at.strftime(" on %B %e, %Y") %>
+    </li>
+  <% end %>
+</ul>
