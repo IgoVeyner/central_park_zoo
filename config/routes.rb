@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/guests', to: 'users#index', as: 'users'
   
   get '/species/:id/donate/new', to: 'donations#new', as: 'new_donation'
-  post '/species/:id/donate', to: 'donation#create', as: 'donations'
+  post '/species/:id/donate', to: 'donations#create', as: 'donations'
 
   resources :exhibits, only: [:index, :show] do 
     resources :species, only: [:index]
