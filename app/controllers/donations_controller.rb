@@ -1,4 +1,6 @@
 class DonationsController < ApplicationController
+  before_action :redirect_anon_users_to_home
+
   def new
     @donation = Donation.new
   end
