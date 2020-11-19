@@ -39,7 +39,8 @@ class DonationsController < ApplicationController
 
     if @species
       top_donation = @species.donations.maximum(:amount)
-      @donation = @species.donations.where(amount: top_donation)
+      @donation = @species.donations.find_by(amount: top_donation)
+      render :show
     else
       flash[:message] = "#{params[:species_id]} is not a valid Species"
       render "partials/error"
