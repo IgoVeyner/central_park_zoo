@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :donations
+  has_many :species, through: :donations
+
   # Todo: Validations
   # Name: No numbers or symbols
   # Birthdate: Not after today's date
