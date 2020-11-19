@@ -89,3 +89,13 @@ Animal.create(
   exhibit_id: polar_circle.id,
   species_id: penguin.id
 )
+
+# Donation Creation
+25.times do
+  donation = Donation.create(
+    amount: rand(1..500),
+    species_id: rand(1..2),
+    user_id: rand(1..2)
+  )
+  donation.add_donation
+end
