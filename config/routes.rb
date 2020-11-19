@@ -11,10 +11,10 @@ Rails.application.routes.draw do
   post '/logout', to: 'session#destroy', as: 'logout'
   
   match '/auth/:github/callback', to: 'session#github_login', via: [:get, :post]
-  
-  get '/guest/:id', to: 'users#show', as: 'user'
-  get '/guests', to: 'users#index', as: 'users'
-  get '/guest/:id/donations', to: 'donations#index', as: 'user_donations'
+
+  resources :guests, controller: 'users', as: 'users'
+
+  # get '/guest/:guest_id/donations', to: '../donations#index', as: 'user_donations'
 
   resources :exhibits, only: [:index, :show] do 
     resources :species, only: [:index]
