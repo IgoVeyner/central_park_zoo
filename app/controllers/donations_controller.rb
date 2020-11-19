@@ -8,9 +8,15 @@ class DonationsController < ApplicationController
     @donation.user = current_user
 
     if @donation.save 
-      # user.donate(@donation)
-      # add flash message
-      # redirect
+      message = @donation.add_donation
+      flash[:message] = message
+
+      if message.include?("Sorry")
+        render :new
+      else
+        redirect_to user_path(current_user)
+      end
+      
     else 
       render :new
     end
