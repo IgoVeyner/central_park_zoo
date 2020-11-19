@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   end
 
   resources :species, only: [:index, :show] do
-    resources :donations, only: [:new, :create]
+    resources :donations, only: [:new, :create, :index]
   end
 
 end
