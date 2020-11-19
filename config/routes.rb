@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   resources :species, only: [:index, :show] do
     resources :donations, only: [:new, :create, :index]
+    get '/top_donor', to: 'donations#top_donor', as: 'top_donor'
   end
 
 end
