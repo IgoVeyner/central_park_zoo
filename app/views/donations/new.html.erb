@@ -18,7 +18,7 @@
     </div>
   <% end %>
 
-<%= form_for @donation, url: donations_path, method: :post do |f| %>
+<%= form_for @donation, url: species_donations_path do |f| %>
 
   <div>
     <%= f.label :amount %>
@@ -30,7 +30,7 @@
     <%= f.text_field :comment %>
   </div>
 
-  <%= f.hidden_field :species_id, value: params[:id] %>
+  <%= f.hidden_field :species_id, value: params[:species_id] %>
 
   <%= f.submit %>
 <% end %>
