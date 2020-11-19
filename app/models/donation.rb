@@ -8,7 +8,7 @@ class Donation < ApplicationRecord
       user.save
       "Thanks for donating $#{amount} to #{species.name}"
     else
-      "Sorry, you do not have enough funds to donate. Your funds: #{user.funds}"
+      "Sorry, you do not have enough funds to donate. Your funds: $#{user.funds}"
     end
   end
   
