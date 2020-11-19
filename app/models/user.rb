@@ -18,5 +18,11 @@ class User < ApplicationRecord
       user.name = auth_hash["info"]["name"]
       user.funds = 100
     end
+  end 
+
+  def self.most_donations
+    donation_amounts = Donation.group(:user_id).count
+    user_id = donation_amounts.key(donation_amounts.values.max)
+    User.find_by_id(user_id)
   end
 end
