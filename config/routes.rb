@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   
   match '/auth/:github/callback', to: 'session#github_login', via: [:get, :post]
 
-  resources :guests, controller: 'users', as: 'user'
-
-  # get '/guest/:guest_id/donations', to: '../donations#index', as: 'user_donations'
+  resources :guests, controller: 'users', as: 'user' do
+    resources :donations, only: [:index]
+  end
 
   resources :exhibits, only: [:index, :show] do 
     resources :species, only: [:index]
