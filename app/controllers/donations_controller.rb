@@ -24,15 +24,13 @@ class DonationsController < ApplicationController
   end
   
   def index
-    if params[:species_id]
-      @species = Species.find_by_id(params[:species_id])
-      
-      if @species 
-        @donations = @species.donations
-      else
-        flash[:message] = "#{params[:species_id]} is not a valid Species"
-        render "partials/error"
-      end
+    argument = params[:species_id] ? Species.find_by_id(params[:species_id]) : User.find_by_id(params[:user_id]) 
+
+    if argument
+      @donations = argument.donations
+    else
+      flash[:message] = "#{params[:species_id] || params[:user_id]} is not a valid #{params[:species_id] ? "Species" : "Guest"}"
+      render "partials/error"
     end
   end
 
