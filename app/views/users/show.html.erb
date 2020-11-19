@@ -10,3 +10,4 @@
 <h2><%= @user.funds %></h2>
 
 <%= link_to  "Logout", logout_path, method: :post %>
+<%= link_to  "My Donations", user_donations_path(@user) %>
