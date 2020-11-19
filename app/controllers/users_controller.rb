@@ -28,8 +28,6 @@ class UsersController < ApplicationController
     User.all.each do |user|
       @user = user if user.donations.count > @user.donations.count
     end
-    
-    render :show
   end
 
   private
