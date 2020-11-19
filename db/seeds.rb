@@ -42,7 +42,7 @@ seal = Species.create(
 )
 
 penguin = Species.create(
-  name: "Eudyptes chrysolophus)",
+  name: "Eudyptes chrysolophus",
   common_name: "Macaroni Penguin",
   conservation_status: "Vulnerable",
   image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/SGI-2016-South_Georgia_%28Cooper_Bay%29%E2%80%93Macaroni_penguin_%28Eudyptes_chrysolophus%29_01.jpg/825px-SGI-2016-South_Georgia_%28Cooper_Bay%29%E2%80%93Macaroni_penguin_%28Eudyptes_chrysolophus%29_01.jpg",
