@@ -5,6 +5,9 @@ class Donation < ApplicationRecord
   validates :amount, presence: true
   validates :amount, numericality: {greater_than: 0}
 
+  # Todo Validations
+  # comment length: 300
+
   def add_donation
     if user.funds >= amount
       user.funds -= amount
