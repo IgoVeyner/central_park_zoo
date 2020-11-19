@@ -7,7 +7,7 @@ class SpeciesController < ApplicationController
       @exhibit = Exhibit.find_by_id(params[:exhibit_id])
 
       if @exhibit
-        @species_all = @exhibit.species
+        @species_all = @exhibit.species.uniq
       else
         flash[:message] = "#{params[:exhibit_id]} is not a valid Exhibit"
         render "partials/error"
