@@ -1,0 +1,10 @@
+<h1>Highest Donation</h1>
+<h1>$<%= @donation.amount %></h1>
+<h2>by <%= @donation.user.name %></h2>
+<h2>to <%= @donation.species.name %></h2>
+
+<% if @donation.comment.nil? %>
+  <h2>No Comment</h2>
+<% else %>
+  <h2>Comment: <%= @donation.comment %></h2>  
+<% end %>
