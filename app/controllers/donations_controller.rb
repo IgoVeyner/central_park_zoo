@@ -4,7 +4,16 @@ class DonationsController < ApplicationController
   end
 
   def create
-    raise "donations#create".inspect
+    @donation = Donation.new(donation_params)
+    @donation.user = current_user
+
+    if @donation.save 
+      # user.donate(@donation)
+      # add flash message
+      # redirect
+    else 
+      render :new
+    end
   end
 
   private
