@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :guests, controller: 'users', as: 'user' do
     resources :donations, only: [:index]
+    get '/most_donations', to: 'users#most_donations', as: 'most_donation'
   end
 
   resources :exhibits, only: [:index, :show] do 
