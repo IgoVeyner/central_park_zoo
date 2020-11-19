@@ -29,4 +29,8 @@ class User < ApplicationRecord
   def average_donation
     donations.average(:amount).to_i
   end
+
+  def total_donations_by_species(species)
+    self.donations.where("species_id = #{species.id}").sum(:amount)
+  end
 end
