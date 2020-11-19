@@ -25,4 +25,8 @@ class User < ApplicationRecord
     user_id = donation_amounts.key(donation_amounts.values.max)
     User.find_by_id(user_id)
   end
+
+  def average_donation
+    donations.average(:amount).to_i
+  end
 end
