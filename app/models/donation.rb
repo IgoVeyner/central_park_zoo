@@ -2,6 +2,9 @@ class Donation < ApplicationRecord
   belongs_to :user
   belongs_to :species
 
+  validates :amount, presence: true
+  validates :amount, numericality: {greater_than: 0}
+
   def add_donation
     if user.funds >= amount
       user.funds -= amount
