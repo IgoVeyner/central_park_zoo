@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   
   match '/auth/:github/callback', to: 'session#github_login', via: [:get, :post]
 
-  resources :guests, controller: 'users', as: 'users'
+  resources :guests, controller: 'users', as: 'user'
 
   # get '/guest/:guest_id/donations', to: '../donations#index', as: 'user_donations'
 
