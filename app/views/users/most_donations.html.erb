@@ -1,0 +1,4 @@
+<h1><%= @user.donations.count %> Donations</h1>
+<h2>Average Donation Amount: $<%= @user.donations.average(:amount).to_i %></h2>
+
+<%= render  partial: "info", locals: {user: @user} %>
