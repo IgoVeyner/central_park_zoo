@@ -18,9 +18,21 @@ class DonationsController < ApplicationController
       else
         redirect_to user_path(current_user)
       end
-      
     else 
       render :new
+    end
+  end
+  
+  def index
+    if params[:species_id]
+      @species = Species.find_by_id(params[:species_id])
+      
+      if @species 
+        @donations = @species.donations
+      else
+        flash[:message] = "#{params[:species_id]} is not a valid Species"
+        render "partials/error"
+      end
     end
   end
 
