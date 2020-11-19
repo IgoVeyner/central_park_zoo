@@ -23,11 +23,7 @@ class UsersController < ApplicationController
   end
 
   def most_donations
-    @user = User.new
-
-    User.all.each do |user|
-      @user = user if user.donations.count > @user.donations.count
-    end
+    @user = User.most_donations
   end
 
   private
