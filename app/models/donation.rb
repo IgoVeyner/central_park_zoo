@@ -10,10 +10,10 @@ class Donation < ApplicationRecord
 
   def add_donation
     if user.funds >= amount
-      user.funds -= amount
-      species.donation_total += amount
-      user.save
-      species.save
+      new_user_finds = user.funds - amount
+      new_species_donation_total = species.donation_total + amount
+      user.update(funds: new_user_finds)
+      species.update(donation_total: new_species_donation_total)
       "Thanks for donating $#{amount} to #{species.name}"
     else
       "Sorry, you do not have enough funds to donate. Your funds: $#{user.funds}"
