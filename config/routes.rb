@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   match '/auth/:github/callback', to: 'session#github_login', via: [:get, :post]
 
   get 'guests/most_donations', to: 'users#most_donations', as: 'most_donation'
+  
   resources :guests, controller: 'users', as: 'user' do
     resources :donations, only: [:index]
   end
