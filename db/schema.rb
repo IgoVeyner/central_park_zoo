@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_19_141057) do
+ActiveRecord::Schema.define(version: 2020_11_19_142331) do
 
   create_table "animals", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2020_11_19_141057) do
     t.string "image_url", default: "https://www.drupal.org/files/issues/2019-07-21/missing.png"
     t.string "description"
     t.integer "exhibit_id"
+    t.integer "species_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.integer "amount"
+    t.string "comment"
+    t.integer "user_id"
     t.integer "species_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
