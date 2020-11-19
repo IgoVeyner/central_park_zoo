@@ -5,5 +5,11 @@
 <h2><%= @animal.age %> years old</h2>
 <h2><%= @animal.weight %> lbs.</h2>
 <h2>Species: <%= link_to @animal.species.name, species_path(@animal.species) %></h2>
+
+<% if @animal.species.common_name %>
+  <p>aka</p>
+  <h3><%= @animal.species.common_name %></h3>
+<% end %>
+
 <h2>Exhibit: <%= link_to @animal.exhibit.name, exhibit_path(@animal.exhibit) %></h2>
 <h3><%= @animal.description %></h3>
