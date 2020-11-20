@@ -1,5 +1,6 @@
 class AnimalsController < ApplicationController
   before_action :redirect_anon_users_to_home
+  before_action :find_animal, only: [:show, :edit, :update, :destroy]
 
   def new
     @animal = Animal.new
@@ -9,12 +10,12 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.new(animal_params)
-    @species = Species.all
     @exhibit = Exhibit.find_by_id(params[:exhibit_id])
-
+    
     if @animal.save
       redirect_to exhibit_animal_path(exhibit, @animal)
     else
+      @species = Species.all
       render :new
     end
   end
@@ -45,15 +46,10 @@ class AnimalsController < ApplicationController
         flash[:message] = "#{params[:exhibit_id]} is not a valid Exhibit"
         render "partials/error"
       end
-    else
-      @animal = Animal.find_by_id(params[:id])
-      redirect_to_errors_page(Animal.name) unless @animal
     end
   end
 
   def edit
-    @animal = Animal.find_by_id(params[:id])
-
     if @animal
       @species = Species.all
       @exhibit = @animal.exhibit
@@ -64,7 +60,6 @@ class AnimalsController < ApplicationController
   end
 
   def update
-    @animal = Animal.find_by_id(params[:id])
     @exhibit =  @animal.exhibit if @animal
 
     if @animal.update(animal_params)
