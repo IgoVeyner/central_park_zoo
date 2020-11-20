@@ -12,7 +12,7 @@ class AnimalsController < ApplicationController
     @animal = Animal.new(animal_params)
     
     if @animal.save
-      redirect_to animal_path(@exhibit, @animal)
+      redirect_to animal_path(@animal)
     else
       @exhibits = Exhibit.all
       @species = Species.all
