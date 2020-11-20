@@ -1,5 +1,9 @@
 <h1>Animals</h1>
 
+<% if is_admin %>
+  <%= link_to  "New Animal", new_animal_path(@animal) %>
+<% end %>
+
 <ul>
   <% @animals.each do |animal| %>
   
