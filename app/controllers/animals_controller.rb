@@ -42,6 +42,25 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def edit
+    @exhibit = Exhibit.find_by_id(params[:exhibit_id])
+    
+    if @exhibit
+     @animal = @exhibit.animals.find_by_id(params[:id])
+    
+      if @animal
+        @species = Species.all
+      else
+        flash[:message] = "#{params[:id]} is not a valid Animal or is does not belong to this Exhibit"
+        render "partials/error"
+      end
+
+    else
+      flash[:message] = "#{params[:exhibit_id]} is not a valid Exhibit"
+      render "partials/error"
+    end
+  end
+
   private
 
   def animal_params
