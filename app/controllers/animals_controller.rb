@@ -1,6 +1,12 @@
 class AnimalsController < ApplicationController
   before_action :redirect_anon_users_to_home
 
+  def new
+    @animal = Animal.new
+    @species = Species.all
+    @exhibit = Exhibit.find_by_id(params[:exhibit_id])
+  end
+
   def index
     @exhibit = Exhibit.find_by_id(params[:exhibit_id])
 
