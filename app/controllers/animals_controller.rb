@@ -8,7 +8,14 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    
+    @animal = Animal.new(animal_params)
+
+    if @animal.save
+      exhibit = Exhibit.find_by_id(params[:exhibit_id])
+      redirect_to exhibit_animal_path(exhibit, @animal)
+    else
+      render :new
+    end
   end
 
   def index
