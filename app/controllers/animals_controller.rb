@@ -7,6 +7,10 @@ class AnimalsController < ApplicationController
     @exhibit = Exhibit.find_by_id(params[:exhibit_id])
   end
 
+  def create
+  
+  end
+
   def index
     @exhibit = Exhibit.find_by_id(params[:exhibit_id])
 
