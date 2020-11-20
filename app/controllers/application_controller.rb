@@ -26,4 +26,11 @@ class ApplicationController < ActionController::Base
     flash[:message] = "#{params[:id]} is not a valid #{arg_class}"
     render "partials/error"
   end
+
+  def non_admin_error_message
+    unless helpers.is_admin
+      flash[:message] = "You do not have access to this"
+      render "partials/error" 
+    end
+  end
 end
