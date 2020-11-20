@@ -1,1 +1,35 @@
-stub
+<%= form_for animal, url: exhibit_animals_path do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div>
+    <%= f.label :weight %>
+    <%= f.number_field :weight %>
+  </div>
+
+  <div>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <%= f.hidden_field :exhibit_id, value: exhibit.id %>
+
+  <div>
+    <%= label_tag :species_id, "Species" %>
+    <%= select_tag :species_id, options_from_collection_for_select(species, :id, :name) %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
