@@ -1,4 +1,4 @@
-<%= form_for animal, url: exhibit_animals_path do |f| %>
+<%= form_for animal do |f| %>
 
   <% if @animal.errors.any? %>
     <div id="error_message">
@@ -39,7 +39,9 @@
     <%= f.text_field :description %>
   </div>
 
-  <%= f.hidden_field :exhibit_id, value: exhibit.id %>
+  <% if params[:exhibit_id] %>
+    <%= f.hidden_field :exhibit_id, value: params[:exhibit_id] %>
+  <% end %>
 
   <div>
     <%= f.label :species_id, "Species" %>
