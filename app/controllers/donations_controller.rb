@@ -35,7 +35,7 @@ class DonationsController < ApplicationController
   end
 
   def users_index
-    user = User.find_by_id(params[:user_id]
+    user = User.find_by_id(params[:user_id])
 
     if user
       @donations = user.donations
