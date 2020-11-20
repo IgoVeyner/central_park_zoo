@@ -8,7 +8,7 @@ class AnimalsController < ApplicationController
   end
 
   def create
-  
+    
   end
 
   def index
@@ -32,5 +32,11 @@ class AnimalsController < ApplicationController
       flash[:message] = "#{params[:exhibit_id]} is not a valid Exhibit"
       render "partials/error"
     end
+  end
+
+  private
+
+  def animal_params
+    params.require(:animal).permit(:name, :age, :weight, :image_url, :description, :exhibit_id, :species_id)
   end
 end
