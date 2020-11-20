@@ -34,6 +34,18 @@ class DonationsController < ApplicationController
     end
   end
 
+  def users_index
+    user = User.find_by_id(params[:user_id]
+
+    if user
+      @donations = user.donations
+      render :index
+    else
+      flash[:message] = "#{params[:user_id]} is not a valid Guest"
+      render "partials/error"
+    end
+  end
+
   def top_donor
     @species = Species.find_by_id(params[:species_id])
 
