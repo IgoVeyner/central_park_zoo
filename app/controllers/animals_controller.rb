@@ -80,4 +80,9 @@ class AnimalsController < ApplicationController
   def animal_params
     params.require(:animal).permit(:name, :age, :weight, :image_url, :description, :exhibit_id, :species_id)
   end
+
+  def find_animal
+    @animal = Animal.find_by_id(params[:id])
+    redirect_to_errors_page(Animal.name) unless @animal
+  end
 end
