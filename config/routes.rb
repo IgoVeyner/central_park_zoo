@@ -23,7 +23,7 @@ Rails.application.routes.draw do
     resources :animals, only: [:index, :show]
   end
 
-  resources :animals, only: [:index, :new, :create, :edit, :update, :delete]
+  resources :animals
 
   resources :species, only: [:index, :show] do
     resources :donations, only: [:new, :create, :index]
