@@ -1,5 +1,6 @@
 class AnimalsController < ApplicationController
   before_action :redirect_anon_users_to_home
+  before_action :non_admin_error_message, only: [:new, :edit]
   before_action :find_animal, only: [:show, :edit, :update, :destroy]
 
   def new
