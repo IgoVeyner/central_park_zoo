@@ -7,4 +7,6 @@
 <%= render partial: 'info', locals: {user: @user} %>
 
 <%= link_to  "Logout", logout_path, method: :post %>
-<%= link_to  "My Donations", user_donations_path(@user) %>
+<% if has_access %>
+  <%= link_to  "My Donations", user_donations_path(@user) %>
+<% end %>
