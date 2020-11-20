@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  helper_method :current_user
+  
   private
 
   def redirect_anon_users_to_home
