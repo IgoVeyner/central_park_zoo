@@ -2,14 +2,14 @@
 
 <%= form_for animal do |f| %>
 
-  <% if @animal.errors.any? %>
+  <% if animal.errors.any? %>
     <div id="error_message">
       <h2>
-        <%= pluralize(@animal.errors.count, "error") %> prohibited this animal from being saved:
+        <%= pluralize(animal.errors.count, "error") %> prohibited this animal from being saved:
       </h2>
 
       <ul>
-      <% @animal.errors.full_messages.each do |message| %>
+      <% animal.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
