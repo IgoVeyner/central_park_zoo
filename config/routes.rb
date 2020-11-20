@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   resources :exhibits, only: [:index, :show] do 
-    resources :species, only: [:index]
+    resources :species, only: [:index, :new]
     resources :animals, only: [:index, :show]
   end
 
