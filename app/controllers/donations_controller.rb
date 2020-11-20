@@ -38,8 +38,13 @@ class DonationsController < ApplicationController
     user = User.find_by_id(params[:user_id])
 
     if user
-      @donations = user.donations
-      render :index
+      if helpers.has_donation_access
+        @donations = user.donations
+        render :index
+      else
+        flash[:message] = "You do not have access to see that"
+        render "partials/error"
+      end
     else
       flash[:message] = "#{params[:user_id]} is not a valid Guest"
       render "partials/error"
