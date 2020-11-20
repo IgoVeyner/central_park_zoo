@@ -52,7 +52,7 @@ class AnimalsController < ApplicationController
   def edit
     if @animal
       @species = Species.all
-      @exhibit = @animal.exhibit
+      @exhibits = Exhibit.all
     else
       flash[:message] = "#{params[:id]} is not a valid Animal"
       render "partials/error"
@@ -60,11 +60,10 @@ class AnimalsController < ApplicationController
   end
 
   def update
-    @exhibit =  @animal.exhibit if @animal
-
     if @animal.update(animal_params)
-      redirect_to exhibit_animal_path(@exhibit, @animal)
+      redirect_to animal_path(@animal)
     else
+      @exhibits = Exhibit.all
       @species = Species.all
       render :edit
     end
