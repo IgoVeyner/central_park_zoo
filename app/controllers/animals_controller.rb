@@ -56,11 +56,12 @@ class AnimalsController < ApplicationController
 
   def update
     @animal = Animal.find_by_id(params[:id])
+    @exhibit =  @animal.exhibit if @animal
 
     if @animal.update(animal_params)
-      exhibit =  Exhibit.find_by_id(params[:exhibit_id])
-      redirect_to exhibit_animal_path(exhibit, @animal)
+      redirect_to exhibit_animal_path(@exhibit, @animal)
     else
+      @species = Species.all
       render :edit
     end
   end
