@@ -5,16 +5,16 @@ class AnimalsController < ApplicationController
   def new
     @animal = Animal.new
     @species = Species.all
-    @exhibit = Exhibit.find_by_id(params[:exhibit_id])
+    @exhibits = Exhibit.all
   end
 
   def create
     @animal = Animal.new(animal_params)
-    @exhibit = Exhibit.find_by_id(params[:exhibit_id])
     
     if @animal.save
-      redirect_to exhibit_animal_path(exhibit, @animal)
+      redirect_to animal_path(@exhibit, @animal)
     else
+      @exhibits = Exhibit.all
       @species = Species.all
       render :new
     end
