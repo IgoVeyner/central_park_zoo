@@ -21,6 +21,16 @@ class SpeciesController < ApplicationController
     @species = Species.new
   end
 
+  def create
+    @species = Species.new(species_params)
+
+    if @species.save
+      redirect_to species_path(@species)
+    else
+      render :new
+    end
+  end
+
   private 
 
   def find_species
