@@ -1,5 +1,9 @@
 <h1>Our Species</h1>
 
+<% if is_admin %>
+  <%= link_to  "New Species", new_species_path(@species) %>
+<% end %>
+
 <ul>
   <% @species_all.each do |species| %>
   <li><%= link_to  species.name, species_path(species) %></li>
