@@ -22,6 +22,13 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def edit
+    unless helpers.has_access
+      flash[:message] = "You do not have access to Edit this User"
+      render "partials/error"
+    end
+  end
+
   def update
     if @user.update(user_params)
       redirect_to user_path(@user)
