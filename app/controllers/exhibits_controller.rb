@@ -1,5 +1,5 @@
 class ExhibitsController < ApplicationController
-  before_action :find_exhibit, only: [:show, :edit]
+  before_action :find_exhibit, only: [:show, :edit, :update]
   before_action :redirect_anon_users_to_home
 
   def index
@@ -17,6 +17,14 @@ class ExhibitsController < ApplicationController
       redirect_to exhibit_path(@exhibit)
     else
       render :new
+    end
+  end
+
+  def update
+    if @exhibit.update(exhibit_params)
+      redirect_to exhibit_path(@exhibit)
+    else
+      render :edit
     end
   end
 
