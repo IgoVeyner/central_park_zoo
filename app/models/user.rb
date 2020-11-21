@@ -4,13 +4,18 @@ class User < ApplicationRecord
   has_many :donations
   has_many :species, through: :donations
 
-  # Todo: Validations
-  # Name: No numbers or symbols
-  # Birthdate: Not after today's date
-  # Funds: cannot be negative
-
   validates :username, presence: true
   validates :username, uniqueness: true
+  validates :name, presence: true
+  validates :funds, numericality: {greater_than: -1}
+  validates :birthdate, presence: true
+  validate :birthdate_cannot_be_in_the_future
+
+  def birthdate_cannot_be_in_the_future
+    if birthdate > Date.today
+      errors.add(:birthdate, "can't be in the future")
+    end
+  end 
 
   def self.find_or_create_by_omniauth(auth_hash)
     self.where(:username => auth_hash["info"]["email"]).first_or_create do |user|
