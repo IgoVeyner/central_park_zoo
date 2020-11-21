@@ -27,4 +27,8 @@ class SpeciesController < ApplicationController
     @species = Species.find_by_id(params[:id])
     redirect_to_errors_page(Species.name) unless @species
   end
+
+  def species_params
+    params.require(:species).permit(:name, :common_name, :conservation_status, :image_url, :description)
+  end
 end
