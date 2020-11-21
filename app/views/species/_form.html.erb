@@ -1,6 +1,21 @@
 <h2><%= action %> Species</h2>
 
 <%= form_for species do |f| %>
+
+  <% if species.errors.any? %>
+    <div id="error_message">
+      <h2>
+        <%= pluralize(species.errors.count, "error") %> prohibited this species from being saved:
+      </h2>
+
+      <ul>
+      <% species.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
