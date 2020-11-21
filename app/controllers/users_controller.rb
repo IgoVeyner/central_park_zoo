@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:show]
+  before_action :find_user, only: [:show, :edit]
   before_action :redirect_already_logged_in, only: [:new]
   before_action :redirect_anon_users_to_home, only: [:show]
 
