@@ -1,6 +1,7 @@
 class SpeciesController < ApplicationController
-  before_action :find_species, only: [:show, :edit, :update, :destroy]
   before_action :redirect_anon_users_to_home
+  before_action :non_admin_error_message, only: [:new, :edit]
+  before_action :find_species, only: [:show, :edit, :update, :destroy]
 
   def index
     if params[:exhibit_id]
