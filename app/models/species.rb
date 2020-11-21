@@ -6,11 +6,8 @@ class Species < ApplicationRecord
 
   validates :name, presence: true
   validates :name, uniqueness: true
-
-  # Todo validations
-  # common_name no non letters
-  # conservation status presence
-  # description length 500
+  validates :conservation_status, presence: true
+  validates :description, length: { maximum: 500 }
 
   def top_donor
     donation_totals_by_user = donations.group(:user_id).sum(:amount)
