@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_19_142331) do
+ActiveRecord::Schema.define(version: 2020_11_21_202204) do
 
   create_table "animals", force: :cascade do |t|
     t.string "name"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_142331) do
     t.string "username"
     t.string "password_digest"
     t.string "name"
-    t.datetime "birthdate"
+    t.datetime "birthdate", default: "2020-01-01 00:00:00"
     t.integer "funds"
     t.boolean "admin", default: false
     t.datetime "created_at", null: false
