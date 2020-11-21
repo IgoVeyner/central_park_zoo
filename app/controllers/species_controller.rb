@@ -1,5 +1,5 @@
 class SpeciesController < ApplicationController
-  before_action :find_species, only: [:show]
+  before_action :find_species, only: [:show, :edit]
   before_action :redirect_anon_users_to_home
 
   def index
