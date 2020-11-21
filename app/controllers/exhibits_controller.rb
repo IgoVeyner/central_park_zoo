@@ -16,4 +16,8 @@ class ExhibitsController < ApplicationController
     @exhibit = Exhibit.find_by_id(params[:id])
     redirect_to_errors_page(Exhibit.name) unless @exhibit
   end 
+
+  def exhibit_params
+    params.require(:exhibit).permit(:name, :biome, :image_url, :description)
+  end
 end
