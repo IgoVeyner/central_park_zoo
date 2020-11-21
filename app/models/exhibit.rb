@@ -4,8 +4,7 @@ class Exhibit < ApplicationRecord
 
   validates :name, presence: true
   validates :name, uniqueness: true
-
-  # Todo validations
-  # Biome no non-letters
-  # Description max length 500
+  validates :biome, presence: true
+  validates :description, length: { maximum: 500 }
+ 
 end
