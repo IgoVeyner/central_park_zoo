@@ -1,7 +1,7 @@
 class Species < ApplicationRecord
-  has_many :animals
+  has_many :animals, dependent: :destroy
   has_many :exhibits, through: :animals
-  has_many :donations
+  has_many :donations, dependent: :destroy
   has_many :users, through: :donations
 
   validates :name, presence: true

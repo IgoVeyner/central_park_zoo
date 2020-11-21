@@ -1,5 +1,5 @@
 class Exhibit < ApplicationRecord
-  has_many :animals
+  has_many :animals, dependent: :destroy
   has_many :species, through: :animals
 
   validates :name, presence: true
