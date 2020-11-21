@@ -1,5 +1,5 @@
 class SpeciesController < ApplicationController
-  before_action :find_species, only: [:show, :edit, :update]
+  before_action :find_species, only: [:show, :edit, :update, :destroy]
   before_action :redirect_anon_users_to_home
 
   def index
@@ -37,6 +37,11 @@ class SpeciesController < ApplicationController
     else 
       render :edit
     end
+  end
+
+  def destroy
+    @species.destroy
+    redirect_to species_index_path
   end
 
   private 
