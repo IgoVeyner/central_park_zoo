@@ -59,7 +59,7 @@ class DonationsController < ApplicationController
         @user = @species.top_donor
       else
         flash[:message] = "No one has donated to #{@species.name} yet"
-        return render "partials/error"
+        return render "species/show"
       end
     else
       flash[:message] = "#{params[:species_id]} is not a valid Species"
