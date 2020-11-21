@@ -1,0 +1,52 @@
+<%= form_for(user, url: create_user_path) do |f| %>
+
+  <% if user.errors.any? %>
+    <div id="error_message">
+      <h2>
+        <%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:
+      </h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :birthdate %>
+    <%= f.date_field :birthdate %>
+  </div>
+
+  <div>
+    <%= f.label :funds %>
+    <%= f.number_field :funds %>
+  </div>
+
+  <div>
+    <%= f.label :admin, "Are you a zookeeper?" %>
+    <%= f.check_box :admin %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= render  partial: 'partials/omniauth', locals: {phrase: "Signup"} %>
