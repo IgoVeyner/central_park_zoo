@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:show, :edit]
+  before_action :find_user, only: [:show, :edit, :update]
   before_action :redirect_already_logged_in, only: [:new]
   before_action :redirect_anon_users_to_home, only: [:show]
 
@@ -20,6 +20,14 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+  end
+
+  def update
+    if @user.update(user_params)
+      redirect_to user_path(@user)
+    else
+      render :edit
+    end
   end
 
   def most_donations
