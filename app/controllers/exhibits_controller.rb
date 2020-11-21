@@ -1,5 +1,5 @@
 class ExhibitsController < ApplicationController
-  before_action :find_exhibit, only: [:show]
+  before_action :find_exhibit, only: [:show, :edit]
   before_action :redirect_anon_users_to_home
 
   def index
