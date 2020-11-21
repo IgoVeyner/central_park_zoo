@@ -24,12 +24,12 @@ class DonationsController < ApplicationController
   end
   
   def index
-    argument = params[:species_id] ? Species.find_by_id(params[:species_id]) : User.find_by_id(params[:user_id]) 
+    @species = Species.find_by_id(params[:species_id])
 
-    if argument
-      @donations = argument.donations
+    if @species
+      @donations = @species.donations
     else
-      flash[:message] = "#{params[:species_id] || params[:user_id]} is not a valid #{params[:species_id] ? "Species" : "Guest"}"
+      flash[:message] = "#{params[:species_id]} is not a valid Species"
       render "partials/error"
     end
   end
