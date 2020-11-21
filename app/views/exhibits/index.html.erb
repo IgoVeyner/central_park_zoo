@@ -1,5 +1,9 @@
 <h1>Our Exhibits</h1>
 
+<% if is_admin %>
+  <%= link_to  "New Exhibit", new_exhibit_path(@exhibit) %>
+<% end %>
+
 <ul>
   <% @exhibits.each do |exhibit| %>
   <li><%= link_to  exhibit.name, exhibit_path(exhibit) %></li>
