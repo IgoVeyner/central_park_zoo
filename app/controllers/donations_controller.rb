@@ -55,7 +55,12 @@ class DonationsController < ApplicationController
     @species = Species.find_by_id(params[:species_id])
 
     if @species
-      @user = @species.top_donor
+      unless @species.donations.empty?
+        @user = @species.top_donor
+      else
+        flash[:message] = "No one has donated to #{@species.name} yet"
+        return render "partials/error"
+      end
     else
       flash[:message] = "#{params[:species_id]} is not a valid Species"
       render "partials/error"
