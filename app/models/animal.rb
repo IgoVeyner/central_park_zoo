@@ -3,10 +3,10 @@ class Animal < ApplicationRecord
   belongs_to :exhibit
 
   validates :name, presence: true
-
-  # Todo Validations:
-  # age no non numbers, presence
-  # weight no non numbers, presence
-  # description length 500
-  # exhibit_id & species_id  presence
+  validates :age, presence: true
+  validates :age, numericality: {greater_than: -1}
+  validates :weight, presence: true
+  validates :weight, numericality: {greater_than: -1}
+  validates :description, length: { maximum: 500 }
+  
 end
