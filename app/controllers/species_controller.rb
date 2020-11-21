@@ -17,6 +17,10 @@ class SpeciesController < ApplicationController
     end
   end
 
+  def new
+    @species = Species.new
+  end
+
   private 
 
   def find_species
