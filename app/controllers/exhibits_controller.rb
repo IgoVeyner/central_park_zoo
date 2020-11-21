@@ -6,6 +6,10 @@ class ExhibitsController < ApplicationController
     @exhibits = Exhibit.all
   end
 
+  def new
+    @exhibit = Exhibit.new
+  end
+
   private 
 
   def find_exhibit
