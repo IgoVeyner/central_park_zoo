@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     get '/donations', to: 'donations#users_index', as: 'donations'
   end
 
-  resources :exhibits, only: [:index, :show] do 
+  resources :exhibits do 
     resources :species, only: [:index]
     resources :animals, only: [:index, :show]
   end
