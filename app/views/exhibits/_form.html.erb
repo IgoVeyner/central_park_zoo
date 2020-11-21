@@ -1,0 +1,26 @@
+<h2><%= action %> Exhibit</h2>
+
+<%= form_for exhibit do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :biome %>
+    <%= f.text_field :biome %>
+  </div>
+
+  <div>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
