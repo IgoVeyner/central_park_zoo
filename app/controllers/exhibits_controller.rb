@@ -1,5 +1,5 @@
 class ExhibitsController < ApplicationController
-  before_action :find_exhibit, only: [:show, :edit, :update]
+  before_action :find_exhibit, only: [:show, :edit, :update, :destroy]
   before_action :redirect_anon_users_to_home
 
   def index
@@ -26,6 +26,11 @@ class ExhibitsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @exhibit.destroy
+    redirect_to exhibits_path
   end
 
   private 
