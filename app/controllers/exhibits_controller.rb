@@ -10,6 +10,16 @@ class ExhibitsController < ApplicationController
     @exhibit = Exhibit.new
   end
 
+  def create
+    @exhibit = Exhibit.new(exhibit_params)
+
+    if @exhibit.save
+      redirect_to exhibit_path(@exhibit)
+    else
+      render :new
+    end
+  end
+
   private 
 
   def find_exhibit
