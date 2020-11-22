@@ -1,3 +1,9 @@
+<% if flash[:message] %>
+  <div class="center alert">
+    <p><%= flash[:message] %></p>
+  </div>
+<% end %>
+
 <%= render partial: 'users', locals: {users: @users, phrase: "Guests"} %>
 
 <h2><%= link_to  "Most Donations", most_donation_path %></h2>
