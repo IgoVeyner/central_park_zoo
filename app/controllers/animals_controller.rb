@@ -85,4 +85,9 @@ class AnimalsController < ApplicationController
     @animal = Animal.find_by_id(params[:id])
     redirect_to_errors_page(Animal.name) unless @animal
   end
+
+  def get_all_species_and_exhibits
+    @species = Species.all
+    @exhibits = Exhibit.all
+  end
 end
