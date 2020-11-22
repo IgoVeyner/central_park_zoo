@@ -28,8 +28,7 @@ class DonationsController < ApplicationController
     unless @species.donations.empty?
       @donations = @species.donations
     else
-      flash[:message] = "No one has donated to #{@species.name} yet"
-      return render "species/show"
+      no_donation_message
     end
   end
 
@@ -54,8 +53,7 @@ class DonationsController < ApplicationController
     unless @species.donations.empty?
       @user = @species.top_donor
     else
-      flash[:message] = "No one has donated to #{@species.name} yet"
-      return render "species/show"
+      no_donation_message
     end
   end
 
@@ -68,5 +66,10 @@ class DonationsController < ApplicationController
   def find_species
     @species = Species.find_by_id(params[:species_id])
     render_error(params[:species_id], Species.name, species_index_path) unless @species
+  end
+
+  def no_donation_message
+    flash[:message] = "No one has donated to #{@species.name} yet"
+    render "species/show"
   end
 end
