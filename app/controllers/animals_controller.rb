@@ -30,9 +30,12 @@ class AnimalsController < ApplicationController
 
   def show
     if params[:exhibit_id]  
-      @exhibit = helpers.find_exhibit_or_redirect
-      @animal = @exhibit.animals.find_by_id(params[:id])
-      render_error(params[:id], Animal.name, exhibit_animals_path(@exhibit)) unless @animal
+      find_exhibit
+
+      if @exhibit
+        @animal = @exhibit.animals.find_by_id(params[:id])
+        render_error(params[:id], Animal.name, exhibit_animals_path(@exhibit)) unless @animal
+      end
     else 
       find_animal
     end
