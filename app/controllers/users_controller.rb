@@ -53,6 +53,6 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find_by_id(params[:id])
-    redirect_to_errors_page(User.name) unless @user
+    render_error(params[:id], User.name, user_index_path) unless @user
   end
 end
