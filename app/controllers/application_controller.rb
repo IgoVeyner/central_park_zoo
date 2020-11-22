@@ -27,9 +27,9 @@ class ApplicationController < ActionController::Base
     render "partials/error"
   end
 
-  def render_error(id, class_name)
+  def render_error(id, class_name, target)
     flash[:message] = "#{id} is not a valid #{class_name}"
-    render "partials/error"
+    redirect_to target
   end
 
   def non_admin_error_message
