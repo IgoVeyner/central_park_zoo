@@ -71,6 +71,6 @@ class DonationsController < ApplicationController
 
   def find_species
     @species = Species.find_by_id(params[:species_id])
-    render_error(params[:id], Species.name, species_index_path) unless @species
+    render_error(params[:species_id], Species.name, species_index_path) unless @species
   end
 end
