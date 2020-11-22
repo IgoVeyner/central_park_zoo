@@ -77,4 +77,8 @@ class DonationsController < ApplicationController
   def donation_params
     params.require(:donation).permit(:amount, :comment, :species_id)
   end
+
+  def find_species
+    @species = Species.find_by_id(params[:species_id])
+  end
 end
