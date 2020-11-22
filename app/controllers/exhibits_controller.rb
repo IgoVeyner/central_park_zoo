@@ -1,7 +1,9 @@
 class ExhibitsController < ApplicationController
+  include ExhibitsHelper
+
   before_action :redirect_anon_users_to_home
   before_action :non_admin_error_message, only: [:new, :edit]
-  before_action :find_exhibit, only: [:show, :edit, :update, :destroy]
+  before_action :find_exhibit_or_redirect, only: [:show, :edit, :update, :destroy]
 
   def index
     @exhibits = Exhibit.all
@@ -35,11 +37,6 @@ class ExhibitsController < ApplicationController
   end
 
   private 
-
-  def find_exhibit
-    @exhibit = Exhibit.find_by_id(params[:id])
-    redirect_to_errors_page(Exhibit.name) unless @exhibit
-  end 
 
   def exhibit_params
     params.require(:exhibit).permit(:name, :biome, :image_url, :description)
