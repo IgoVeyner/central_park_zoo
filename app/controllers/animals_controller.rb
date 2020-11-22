@@ -22,13 +22,8 @@ class AnimalsController < ApplicationController
   def index
     if params[:exhibit_id]
       @exhibit = Exhibit.find_by_id(params[:exhibit_id])
-
-      if @exhibit 
-        @animals = @exhibit.animals
-      else 
-        flash[:message] = "#{params[:exhibit_id]} is not a valid Exhibit"
-        render "partials/error"
-      end
+      helpers.find_exhibit_or_redirect
+      @animals = @exhibit.animals
     else
       @animals = Animal.all
     end
