@@ -2,7 +2,7 @@ class AnimalsController < ApplicationController
   before_action :redirect_anon_users_to_home
   before_action :non_admin_error_message, only: [:new, :edit]
   before_action :find_animal, only: [:show, :edit, :update, :destroy]
-  before_action :get_all_species_and_exhibits, only: [:new]
+  before_action :get_all_species_and_exhibits, only: [:new, :edit]
 
   def new
     @animal = Animal.new
@@ -48,15 +48,6 @@ class AnimalsController < ApplicationController
     end
   end
 
-  def edit
-    if @animal
-      get_all_species_and_exhibits
-    else
-      flash[:message] = "#{params[:id]} is not a valid Animal"
-      render "partials/error"
-    end
-  end
-
   def update
     if @animal.update(animal_params)
       redirect_to animal_path(@animal)
@@ -79,7 +70,7 @@ class AnimalsController < ApplicationController
 
   def find_animal
     @animal = Animal.find_by_id(params[:id])
-    redirect_to_errors_page(Animal.name) unless @animal
+    render_error(params[:id], Animal.name, animals_path) unless @animal
   end
 
   def get_all_species_and_exhibits
