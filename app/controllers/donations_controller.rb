@@ -25,13 +25,11 @@ class DonationsController < ApplicationController
   end
   
   def index
-    if @species
-      unless @species.donations.empty?
-        @donations = @species.donations
-      else
-        flash[:message] = "No one has donated to #{@species.name} yet"
-        return render "species/show"
-      end
+    unless @species.donations.empty?
+      @donations = @species.donations
+    else
+      flash[:message] = "No one has donated to #{@species.name} yet"
+      return render "species/show"
     end
   end
 
@@ -53,13 +51,11 @@ class DonationsController < ApplicationController
   end
 
   def top_donor
-    if @species
-      unless @species.donations.empty?
-        @user = @species.top_donor
-      else
-        flash[:message] = "No one has donated to #{@species.name} yet"
-        return render "species/show"
-      end
+    unless @species.donations.empty?
+      @user = @species.top_donor
+    else
+      flash[:message] = "No one has donated to #{@species.name} yet"
+      return render "species/show"
     end
   end
 
