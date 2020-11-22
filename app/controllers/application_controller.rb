@@ -27,6 +27,11 @@ class ApplicationController < ActionController::Base
     render "partials/error"
   end
 
+  def render_error(id, class_name)
+    flash[:message] = "#{id} is not a valid #{class_name}"
+    render "partials/error"
+  end
+
   def non_admin_error_message
     unless helpers.is_admin
       flash[:message] = "You do not have access to this"
