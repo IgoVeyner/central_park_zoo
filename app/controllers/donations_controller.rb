@@ -1,6 +1,6 @@
 class DonationsController < ApplicationController
   before_action :redirect_anon_users_to_home
-  before_action :find_species, only: [:index, :users_index]
+  before_action :find_species, only: [:index, :top_donor]
 
   def new
     @donation = Donation.new
@@ -32,13 +32,12 @@ class DonationsController < ApplicationController
         flash[:message] = "No one has donated to #{@species.name} yet"
         return render "species/show"
       end
-    else
-      flash[:message] = "#{params[:species_id]} is not a valid Species"
-      render "partials/error"
     end
   end
 
   def users_index
+    user = User.find_by_id(params[:user_id])
+
     if user
       if helpers.has_donation_access
         @donations = user.donations
@@ -54,8 +53,6 @@ class DonationsController < ApplicationController
   end
 
   def top_donor
-    @species = Species.find_by_id(params[:species_id])
-
     if @species
       unless @species.donations.empty?
         @user = @species.top_donor
@@ -63,9 +60,6 @@ class DonationsController < ApplicationController
         flash[:message] = "No one has donated to #{@species.name} yet"
         return render "species/show"
       end
-    else
-      flash[:message] = "#{params[:species_id]} is not a valid Species"
-      render "partials/error"
     end
   end
 
