@@ -39,6 +39,10 @@ class UsersController < ApplicationController
 
   def most_donations
     @user = User.most_donations
+    unless @user
+      flash[:message] = "No donations yet"
+      render "partials/error"
+    end
   end
 
   def zookeepers
