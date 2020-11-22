@@ -41,6 +41,11 @@ class UsersController < ApplicationController
     @user = User.most_donations
   end
 
+  def zookeepers
+    @users = User.where("admin = true")
+    render :index
+  end
+
   private
 
   def user_params
