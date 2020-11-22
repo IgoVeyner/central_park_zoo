@@ -42,8 +42,7 @@ class UsersController < ApplicationController
   end
 
   def zookeepers
-    @users = User.where("admin = true")
-    render :index
+    @zookeepers = User.where("admin = true")
   end
 
   private
