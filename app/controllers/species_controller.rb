@@ -46,6 +46,11 @@ class SpeciesController < ApplicationController
     redirect_to_errors_page(Species.name) unless @species
   end
 
+  def find_exhibit
+    @exhibit = Exhibit.find_by_id(params[:exhibit_id])
+    render_error(params[:exhibit_id], Exhibit.name, exhibits_path) unless @exhibit
+  end
+
   def species_params
     params.require(:species).permit(:name, :common_name, :conservation_status, :image_url, :description)
   end
