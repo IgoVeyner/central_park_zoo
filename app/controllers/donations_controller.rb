@@ -1,6 +1,7 @@
 class DonationsController < ApplicationController
   before_action :redirect_anon_users_to_home
   before_action :find_species, only: [:index, :top_donor]
+  before_action :find_user, only: [:users_index]
 
   def new
     @donation = Donation.new
@@ -33,18 +34,11 @@ class DonationsController < ApplicationController
   end
 
   def users_index
-    user = User.find_by_id(params[:user_id])
-
-    if user
-      if helpers.has_donation_access
-        @donations = user.donations
-        render :index
-      else
-        flash[:message] = "You do not have access to see that"
-        render "partials/error"
-      end
+    if helpers.has_donation_access
+      @donations = @user.donations
+      render :index
     else
-      flash[:message] = "#{params[:user_id]} is not a valid Guest"
+      flash[:message] = "You do not have access to see that"
       render "partials/error"
     end
   end
@@ -66,6 +60,11 @@ class DonationsController < ApplicationController
   def find_species
     @species = Species.find_by_id(params[:species_id])
     render_error(params[:species_id], Species.name, species_index_path) unless @species
+  end
+
+  def find_user
+    @user = User.find_by_id(params[:user_id])
+    render_error(params[:user_id], User.name, user_index_path) unless @user
   end
 
   def no_donation_message
