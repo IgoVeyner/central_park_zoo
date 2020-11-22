@@ -5,14 +5,8 @@ class SpeciesController < ApplicationController
 
   def index
     if params[:exhibit_id]
-      @exhibit = Exhibit.find_by_id(params[:exhibit_id])
-
-      if @exhibit
-        @species_all = @exhibit.species.uniq
-      else
-        flash[:message] = "#{params[:exhibit_id]} is not a valid Exhibit"
-        render "partials/error"
-      end
+      find_exhibit
+      @species_all = @exhibit.species.uniq if @exhibit
     else
       @species_all = Species.all
     end
