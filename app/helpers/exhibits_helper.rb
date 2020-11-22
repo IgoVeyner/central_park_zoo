@@ -4,6 +4,7 @@ module ExhibitsHelper
     id = params[:exhibit_id] || params[:id]
     @exhibit = Exhibit.find_by_id(id) 
     render_error(id, Exhibit.name, exhibits_path) unless @exhibit
+    @exhibit
   end 
 
 end

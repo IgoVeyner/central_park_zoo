@@ -21,8 +21,7 @@ class AnimalsController < ApplicationController
 
   def index
     if params[:exhibit_id]
-      @exhibit = Exhibit.find_by_id(params[:exhibit_id])
-      helpers.find_exhibit_or_redirect
+      @exhibit = helpers.find_exhibit_or_redirect
       @animals = @exhibit.animals
     else
       @animals = Animal.all
