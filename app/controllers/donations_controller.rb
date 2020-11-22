@@ -1,5 +1,6 @@
 class DonationsController < ApplicationController
   before_action :redirect_anon_users_to_home
+  before_action :find_species, only: [:index, :users_index]
 
   def new
     @donation = Donation.new
@@ -24,8 +25,6 @@ class DonationsController < ApplicationController
   end
   
   def index
-    @species = Species.find_by_id(params[:species_id])
-
     if @species
       unless @species.donations.empty?
         @donations = @species.donations
@@ -40,8 +39,6 @@ class DonationsController < ApplicationController
   end
 
   def users_index
-    user = User.find_by_id(params[:user_id])
-
     if user
       if helpers.has_donation_access
         @donations = user.donations
