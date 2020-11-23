@@ -29,14 +29,7 @@
     <%= f.text_field :description %>
   </div>
 
-  <% if params[:exhibit_id] %>
-      <%= f.hidden_field :exhibit_id, value: params[:exhibit_id] %>
-  <% else %>
-    <div>
-      <%= f.label :exhibit_id, "Exhibit" %>
-      <%= f.select :exhibit_id, options_from_collection_for_select(exhibits, :id, :name) %>
-    </div>
-  <% end %>
+  <%= render partial: 'exhibit_input', locals: {f: f, exhibits: exhibits, exhibit: exhibit} %>
 
   <div>
     <%= f.label :species_id, "Species" %>
