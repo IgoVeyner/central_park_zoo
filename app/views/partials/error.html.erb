@@ -1,7 +1,3 @@
-<% if flash[:message] %>
-  <div class="center alert">
-    <p><%= flash[:message] %></p>
-  </div>
-<% end %>
+<%= render partial: 'partials/flash_messages' %>
 
 <%= link_to 'Back', :back %>
