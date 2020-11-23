@@ -2,19 +2,7 @@
 
 <%= form_for animal do |f| %>
 
-  <% if animal.errors.any? %>
-    <div id="error_message">
-      <h2>
-        <%= pluralize(animal.errors.count, "error") %> prohibited this animal from being saved:
-      </h2>
-
-      <ul>
-      <% animal.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render partial: "partials/error_messages", locals: { model: animal } %>
 
   <div>
     <%= f.label :name %>
