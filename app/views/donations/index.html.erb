@@ -5,7 +5,7 @@
     <li>
       $<%= donation.amount %>
 
-      <% if params[:species_id] %>
+      <% if is_nested %>
         by <%= link_to donation.user.name, user_path(donation.user) %>
       <% else %>
         to <%= link_to donation.species.name, species_path(donation.species) %>
