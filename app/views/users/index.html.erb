@@ -1,8 +1,4 @@
-<% if flash[:message] %>
-  <div class="center alert">
-    <p><%= flash[:message] %></p>
-  </div>
-<% end %>
+<%= render partial: 'partials/flash_messages' %>
 
 <%= render partial: 'users', locals: {users: @users, phrase: "Guests"} %>
 
