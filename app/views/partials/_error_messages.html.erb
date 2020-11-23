@@ -1,7 +1,7 @@
  <% if model.errors.any? %>
     <div id="error_message">
       <h2>
-        <%= pluralize(model.errors.count, "error") %> prohibited this <%= model %> from being saved:
+        <%= pluralize(model.errors.count, "error") %> prohibited this <%= model.class %> from being saved:
       </h2>
 
       <ul>
