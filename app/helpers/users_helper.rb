@@ -4,10 +4,7 @@ module UsersHelper
   end
 
   def has_access
-    User.find_by_id(session[:user_id]) == User.find_by_id(params[:id])
-  end
-
-  def has_donation_access
-    User.find_by_id(session[:user_id]) == User.find_by_id(params[:user_id])
+    id = params[:user_id] || params[:id]
+    User.find_by_id(session[:user_id]) == User.find_by_id(id)
   end
 end

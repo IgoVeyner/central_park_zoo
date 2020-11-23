@@ -34,7 +34,7 @@ class DonationsController < ApplicationController
   end
 
   def users_index
-    if helpers.has_donation_access
+    if helpers.has_access
       @donations = @user.donations
       render :index
     else
