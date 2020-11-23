@@ -1,0 +1,7 @@
+<% if is_nested %>
+  <%= link_to animal.name, exhibit_animal_path(exhibit, animal) %>
+<% else %>
+  <%= link_to  animal.name, animal_path(animal) %>
+<% end %>
+
+| <%= link_to animal.species.name, species_path(animal.species) %>  
