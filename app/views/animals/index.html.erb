@@ -2,21 +2,14 @@
 
 <h1>Animals</h1>
 
-<% if is_admin %>
-  <%= link_to  "New Animal", set_url %>
-<% end %>
+<%= link_to  "New Animal", set_url if is_admin %>
 
 <ul>
   <% @animals.each do |animal| %>
   
     <li>
-      <% if params[:exhibit_id] %>
-        <%= link_to animal.name, exhibit_animal_path(@exhibit, animal) %>
-      <% else %>
-        <%= link_to  animal.name, animal_path(animal) %>
-      <% end %>
-      | <%= link_to animal.species.name, species_path(animal.species) %>  
-     </li>
+      <%= render partial: 'list_info', locals: { animal: animal, exhibit: @exhibit} %>
+    </li>
     
   <% end %>
 </ul>
