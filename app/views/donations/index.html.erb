@@ -5,11 +5,7 @@
     <li>
       $<%= donation.amount %>
 
-      <% if is_nested %>
-        by <%= link_to donation.user.name, user_path(donation.user) %>
-      <% else %>
-        to <%= link_to donation.species.name, species_path(donation.species) %>
-      <% end %>
+      <%= render partial: 'link', locals: { donation: donation } %>
 
       <%= donation.created_at.strftime(" on %B %e, %Y") %>
     </li>
