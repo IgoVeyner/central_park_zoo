@@ -1,0 +1,8 @@
+<% if is_nested %>
+    <%= f.hidden_field :exhibit_id, value: exhibit.id %>
+<% else %>
+  <div>
+    <%= f.label :exhibit_id, "Exhibit" %>
+    <%= f.select :exhibit_id, options_from_collection_for_select(exhibits, :id, :name) %>
+  </div>
+<% end %>
