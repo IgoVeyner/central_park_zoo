@@ -6,6 +6,7 @@ class AnimalsController < ApplicationController
 
   def new
     @animal = Animal.new
+    find_exhibit if params[:exhibit_id]
   end
 
   def create
