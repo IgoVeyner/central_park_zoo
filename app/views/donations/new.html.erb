@@ -1,22 +1,6 @@
-<% if flash[:message] %>
-  <div>
-    <p><%= flash[:message] %></p>
-  </div>
-<% end %>
+<%= render partial: 'partials/flash_messages' %>
 
-<% if @donation.errors.any? %>
-    <div id="error_message">
-      <h2>
-        <%= pluralize(@donation.errors.count, "error") %> prohibited this donation from being created:
-      </h2>
-
-      <ul>
-      <% @donation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= render partial: "partials/error_messages", locals: { model: @donation } %>
 
 <%= form_for @donation, url: species_donations_path do |f| %>
 
