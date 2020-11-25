@@ -25,6 +25,12 @@ html, body {
   background-color: black;
 }
 
+.navbar-single ul, .navbar-double ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar-double {
   display: grid;
   grid-template: none / 40% 60%;
@@ -34,3 +40,12 @@ html, body {
 .navbar-double .logo {
   width: 80%;
 }
+
+.navbar-double li {
+  float: left;
+}
+
+.navbar-double li a {
+  display: block;
+  padding: 1.4rem;
+} 
