@@ -42,7 +42,7 @@ html, body {
 }
 
 .navbar-double li {
-  float: left;
+  float: right;
 }
 
 .navbar-double li a {
