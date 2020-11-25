@@ -38,6 +38,14 @@ a { text-decoration: none; }
   padding: 14.4px;
 }
 
+#nav-login-link {
+  
+}
+
+#nav-signup-link {
+  
+}
+
  /* Navigation Bar Styling - user logged in  */
 .navbar-single, .navbar-double {
   background-color: var(--nav-black);
