@@ -6,4 +6,9 @@ module ApplicationHelper
   def is_nested
     params[:exhibit_id]
   end
+
+  def on_signup_or_login_page
+    page = request.env['PATH_INFO']
+    page == '/signup' || page == '/login'
+  end
 end
