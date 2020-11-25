@@ -29,6 +29,9 @@ html, body {
 }
 
  /* Navigation Bar Styling */
+/* Navigation Bar Styling - Login / Signup  */
+
+ /* Navigation Bar Styling - user logged in  */
 .navbar-single, .navbar-double {
   background-color: var(--nav-black);
   text-transform: uppercase;
