@@ -30,3 +30,7 @@ html, body {
   grid-template: none / 40% 60%;
   height: 4em;
 }
+
+.navbar-double .logo {
+  width: 80%;
+}
