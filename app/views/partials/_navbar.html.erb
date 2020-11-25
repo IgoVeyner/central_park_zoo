@@ -1,49 +1,51 @@
-<% if on_welcome_page %>
+<header>
+  <% if on_welcome_page %>
 
-  <nav class="navbar-single">
-    <ul>
-      <li><a href="#">WCS.ORG</a></li>
-      <li><a href="#">BRONX ZOO</a></li>
-      <li><a href="#">TREETOP ADVENTURE</a></li>
-      <li><a href="#">CENTRAL PARK ZOO</a></li>
-      <li><a href="#">NEW YORK AQUARIUM</a></li>
-      <li><a href="#">PROSPECT PARK ZOO</a></li>
-      <li><a href="#">QUEENS ZOO</a></li>
-    </ul>
-  </nav>
-
-<% elsif on_signup_or_login_page %>
-
-  <nav class="navbar-double">
-    <div class="logo-container">
-      <%= image_tag("logo.png", class: "logo") %>
-    </div>
-
-    <div>
+    <nav class="navbar-single">
       <ul>
-        <li><%= link_to  "Login", login_path %></li>
-        <li><%= link_to  "Signup", signup_path %></li>
+        <li><a href="#">WCS.ORG</a></li>
+        <li><a href="#">BRONX ZOO</a></li>
+        <li><a href="#">TREETOP ADVENTURE</a></li>
+        <li><a href="#">CENTRAL PARK ZOO</a></li>
+        <li><a href="#">NEW YORK AQUARIUM</a></li>
+        <li><a href="#">PROSPECT PARK ZOO</a></li>
+        <li><a href="#">QUEENS ZOO</a></li>
       </ul>
-    </div>
-  </nav>
+    </nav>
 
-<% else %>
+  <% elsif on_signup_or_login_page %>
 
-  <nav class="navbar-double">
-    <div class="logo-container">
-      <%= image_tag("logo.png", class: "logo") %>
-    </div>
+    <nav class="navbar-double">
+      <div class="logo-container">
+        <%= image_tag("logo.png", class: "logo") %>
+      </div>
 
-    <div>
-      <ul>
-        <li><%= link_to  "Logout", logout_path, method: :post %></li>
-        <li><%= link_to  "Profile", user_path(current_user) %></li>
-        <li><%= link_to  "Zookeepers", zookeepers_path %></li>
-        <li><%= link_to  "Guests", user_index_path %></li>
-        <li><%= link_to  "Exhibits", exhibits_path %></li>
-        <li><%= link_to  "Animals", species_index_path %></li>
-      </ul>
-    </div>
-  </nav>
+      <div>
+        <ul>
+          <li><%= link_to  "Login", login_path %></li>
+          <li><%= link_to  "Signup", signup_path %></li>
+        </ul>
+      </div>
+    </nav>
 
-<% end %>
+  <% else %>
+
+    <nav class="navbar-double">
+      <div class="logo-container">
+        <%= image_tag("logo.png", class: "logo") %>
+      </div>
+
+      <div>
+        <ul>
+          <li><%= link_to  "Logout", logout_path, method: :post %></li>
+          <li><%= link_to  "Profile", user_path(current_user) %></li>
+          <li><%= link_to  "Zookeepers", zookeepers_path %></li>
+          <li><%= link_to  "Guests", user_index_path %></li>
+          <li><%= link_to  "Exhibits", exhibits_path %></li>
+          <li><%= link_to  "Animals", species_index_path %></li>
+        </ul>
+      </div>
+    </nav>
+
+  <% end %>
+</header>
