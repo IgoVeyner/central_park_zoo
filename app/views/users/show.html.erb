@@ -2,8 +2,6 @@
 
 <%= render partial: 'info', locals: {user: @user} %>
 
-<%= link_to  "Logout", logout_path, method: :post %>
-
 <% if has_access %>
   <%= link_to  "My Donations", user_donations_path(@user) %>
   <%= link_to  "Edit", edit_user_path(@user) %>
