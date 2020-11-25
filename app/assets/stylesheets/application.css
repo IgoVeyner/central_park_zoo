@@ -23,4 +23,7 @@ html, body {
  /* Navigation Bar Styling */
 #navbar {
   background-color: black ;
+  display: grid;
+  grid-template: none / 40% 60%;
+  height: 4em;
 }
