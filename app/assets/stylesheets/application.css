@@ -37,8 +37,14 @@ html, body {
   height: 4em;
 }
 
+.logo-container{
+  display: grid;
+  justify-items: start;
+  align-items: center;
+}
+
 .navbar-double .logo {
-  width: 80%;
+  width: 20em;
 }
 
 .navbar-double li {
