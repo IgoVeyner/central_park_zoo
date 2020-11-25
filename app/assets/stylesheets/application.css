@@ -21,8 +21,11 @@ html, body {
 }
 
  /* Navigation Bar Styling */
-#navbar {
-  background-color: black ;
+.navbar-single, .navbar-double {
+  background-color: black;
+}
+
+.navbar-double {
   display: grid;
   grid-template: none / 40% 60%;
   height: 4em;
