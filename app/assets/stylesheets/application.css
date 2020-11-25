@@ -18,8 +18,8 @@
 :root {
   --nav-font-color: #AE9F86;
   --nav-black: #181a1b;
-  --nav-orange: #e58a1f;
-  --nav-orange-hover: #ff8c05;
+  --button-orange: #e58a1f;
+  --button-orange-hover: #ff8c05;
 }
 
 html, body {
@@ -86,12 +86,12 @@ html, body {
 
 .logout-container {
   display: inline-block;
-  background-color: var(--nav-orange);
+  background-color: var(--button-orange);
   width: 48px;
   height: 48px;
 }
 
-.logout-container:hover { background-color: var(--nav-orange-hover) }
+.logout-container:hover { background-color: var(--button-orange-hover) }
 
 .logout {
   width: 24px;
