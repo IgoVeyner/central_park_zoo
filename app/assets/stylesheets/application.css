@@ -17,6 +17,7 @@
 /* Variables */
 :root {
   --nav-font-color: #AE9F86;
+  --nav-black: #181a1b;
 }
 
 html, body {
@@ -27,7 +28,7 @@ html, body {
 
  /* Navigation Bar Styling */
 .navbar-single, .navbar-double {
-  background-color: black;
+  background-color: var(--nav-black);
   text-transform: uppercase;
 }
 
@@ -65,4 +66,6 @@ html, body {
   text-decoration: none;
   font-family: "Brandon Grotesque", Lato, Helvetica, Arial, sans-serif;
   font-size: 0.8em;
+  letter-spacing: 0.12em;
+  line-height: 1.33;
 } 
