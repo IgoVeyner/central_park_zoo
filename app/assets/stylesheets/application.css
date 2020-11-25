@@ -59,7 +59,7 @@ html, body {
   float: right;
 }
 
-.navbar-double li a {
+.nav-link {
   display: block;
   padding: 1.35em 1em 0em;
   color: var(--nav-font-color);
@@ -70,7 +70,7 @@ html, body {
   line-height: 1.33;
 } 
 
-.navbar-double li a:after {
+.nav-link:after {
   display: block;
   content: '';
   width: 60%;
@@ -80,4 +80,4 @@ html, body {
   transition: transform 200ms ease-in-out;
 }
 
-.navbar-double li a:hover:after{ transform: scaleX(1); }
+.nav-link:hover:after{ transform: scaleX(1); }

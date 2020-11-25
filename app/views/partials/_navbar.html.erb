@@ -37,12 +37,12 @@
 
       <div>
         <ul>
-          <li><%= link_to  "Logout", logout_path, method: :post %></li>
-          <li><%= link_to  "Profile", user_path(current_user) %></li>
-          <li><%= link_to  "Zookeepers", zookeepers_path %></li>
-          <li><%= link_to  "Guests", user_index_path %></li>
-          <li><%= link_to  "Exhibits", exhibits_path %></li>
-          <li><%= link_to  "Animals", species_index_path %></li>
+          <li><%= link_to  "Logout", logout_path, method: :post, class: "nav-link" %></li>
+          <li><%= link_to  "Profile", user_path(current_user), class: "nav-link" %></li>
+          <li><%= link_to  "Zookeepers", zookeepers_path, class: "nav-link" %></li>
+          <li><%= link_to  "Guests", user_index_path, class: "nav-link" %></li>
+          <li><%= link_to  "Exhibits", exhibits_path, class: "nav-link" %></li>
+          <li><%= link_to  "Animals", species_index_path, class: "nav-link" %></li>
         </ul>
       </div>
     </nav>
