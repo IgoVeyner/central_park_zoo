@@ -1,5 +1,6 @@
 <nav>
   <% if on_welcome_page %>
+
     <ul>
       <li><a href="#">WCS.ORG</a></li>
       <li><a href="#">BRONX ZOO</a></li>
@@ -9,7 +10,9 @@
       <li><a href="#">PROSPECT PARK ZOO</a></li>
       <li><a href="#">QUEENS ZOO</a></li>
     </ul>
+    
   <% elsif on_signup_or_login_page %>
+
     <div>
       LOGO GOES HERE
     </div>
@@ -20,7 +23,23 @@
         <li><a href="/signup">SIGN UP</a></li>
       </ul>
     </div>
+
   <% else %>
+
+    <div>
+      LOGO GOES HERE
+    </div>
+
+    <div>
+      <ul>
+        <li><a href="/species">Animals</a></li>
+        <li><a href="/exhibits">Exhibits</a></li>
+        <li><a href="/guests">Guests</a></li>
+        <li><a href="/zookeepers">Zookeepers</a></li>
+        <li><a href="/guests/<%= current_user.id %>">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
 
   <% end %>
 </nav>
