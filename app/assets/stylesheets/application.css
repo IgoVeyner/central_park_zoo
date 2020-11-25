@@ -50,7 +50,8 @@ html, body {
 }
 
 .navbar-double .logo {
-  width: 20em;
+  width: 16em;
+  margin-left: 1em;
 }
 
 .navbar-double li {
@@ -59,7 +60,9 @@ html, body {
 
 .navbar-double li a {
   display: block;
-  padding: 1.4em;
+  padding: 1.9em 1em;
   color: var(--nav-font-color);
   text-decoration: none;
+  font-family: "Brandon Grotesque", Lato, Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
 } 
