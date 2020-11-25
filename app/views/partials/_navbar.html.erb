@@ -1,6 +1,6 @@
-<nav id="navbar">
-  <% if on_welcome_page %>
+<% if on_welcome_page %>
 
+  <nav class="navbar-single">
     <ul>
       <li><a href="#">WCS.ORG</a></li>
       <li><a href="#">BRONX ZOO</a></li>
@@ -10,9 +10,11 @@
       <li><a href="#">PROSPECT PARK ZOO</a></li>
       <li><a href="#">QUEENS ZOO</a></li>
     </ul>
-    
-  <% elsif on_signup_or_login_page %>
+  </nav>
 
+<% elsif on_signup_or_login_page %>
+
+  <nav class="navbar-double">
     <div>
       <%= image_tag("logo.png", class: "logo") %>
     </div>
@@ -23,9 +25,11 @@
         <li><%= link_to  "Signup", signup_path %></li>
       </ul>
     </div>
+  </nav>
 
-  <% else %>
+<% else %>
 
+  <nav class="navbar-double">
     <div>
       <%= image_tag("logo.png", class: "logo") %>
     </div>
@@ -40,6 +44,6 @@
         <li><%= link_to  "Logout", logout_path, method: :post %></li>
       </ul>
     </div>
+  </nav>
 
-  <% end %>
-</nav>
+<% end %>
