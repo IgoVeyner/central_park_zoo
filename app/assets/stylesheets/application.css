@@ -41,7 +41,7 @@ html, body {
 .navbar-double {
   display: grid;
   grid-template: none / 40% 60%;
-  height: 4em;
+  height: 3em;
 }
 
 .logo-container{
@@ -51,7 +51,7 @@ html, body {
 }
 
 .navbar-double .logo {
-  width: 16em;
+  width: 15em;
   margin-left: 1em;
 }
 
@@ -61,7 +61,7 @@ html, body {
 
 .navbar-double li a {
   display: block;
-  padding: 1.9em 1em 0.845em;
+  padding: 1.35em 1em 0em;
   color: var(--nav-font-color);
   text-decoration: none;
   font-family: "Brandon Grotesque", Lato, Helvetica, Arial, sans-serif;
@@ -75,7 +75,7 @@ html, body {
   content: '';
   width: 60%;
   margin: 5px auto;
-  border-bottom: solid 2px var(--nav-font-color);
+  border-bottom: solid 1px var(--nav-font-color);
   transform: scaleX(0);
   transition: transform 200ms ease-in-out;
 }
