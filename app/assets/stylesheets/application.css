@@ -69,3 +69,15 @@ html, body {
   letter-spacing: 0.12em;
   line-height: 1.33;
 } 
+
+.navbar-double li a:after {
+  display: block;
+  content: '';
+  width: 50%;
+  margin: 5px auto;
+  border-bottom: solid 1px var(--nav-font-color);
+  transform: scaleX(0);
+  transition: transform 500ms ease-in-out;
+}
+
+.navbar-double li a:hover:after{ transform: scaleX(1); }
