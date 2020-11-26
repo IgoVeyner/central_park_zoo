@@ -78,7 +78,7 @@ header { overflow-x: hidden }
   font-weight: bold;
   line-height: 16px;
   font-size: 0.7rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.12em;
   text-align: center;
 }
 
@@ -193,7 +193,7 @@ footer #nav-signup-link, footer #nav-login-link {
   padding: 22px 28px;
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
 }
 
 /* Welcome Page Styling */
