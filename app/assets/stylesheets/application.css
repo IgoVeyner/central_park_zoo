@@ -307,3 +307,7 @@ main .logo {
 .login:hover {
   background-color: var(--button-green-hover);
 }
+
+.omniauth-icon {
+  width: 50px;
+}
