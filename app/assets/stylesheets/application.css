@@ -38,6 +38,8 @@ html, body {
 a { text-decoration: none; }
 
   /* Navigation Bar Styling */
+header { overflow-x: hidden }
+
 .navbar-single, .navbar-double {
   background-color: var(--nav-black);
   text-transform: uppercase;
