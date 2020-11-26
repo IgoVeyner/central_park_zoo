@@ -171,3 +171,11 @@ footer h1 {
   text-transform: uppercase;
   color: white;
 }
+
+footer ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
