@@ -309,5 +309,9 @@ main .logo {
 }
 
 .omniauth-icon {
-  width: 50px;
+  width: 40px;
+  filter: invert(0.8);
+  transition: filter 0.15s ease-in-out;
 }
+
+.omniauth-icon:hover { filter: invert(0) }
