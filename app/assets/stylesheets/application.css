@@ -33,7 +33,18 @@ html, body {
 }
 
 a { text-decoration: none; }
+
   /* Navigation Bar Styling */
+.navbar-single, .navbar-double {
+  background-color: var(--nav-black);
+  text-transform: uppercase;
+}
+
+.navbar-single ul, .navbar-double ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 /* Navigation Bar Styling - Login / Signup  */
 #nav-signup-link, #nav-login-link {
@@ -54,16 +65,6 @@ a { text-decoration: none; }
 #nav-signup-link:hover { background-color: var(--button-blue-hover) }
 
  /* Navigation Bar Styling - user logged in  */
-.navbar-single, .navbar-double {
-  background-color: var(--nav-black);
-  text-transform: uppercase;
-}
-
-.navbar-single ul, .navbar-double ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 
 .navbar-double {
   display: grid;
