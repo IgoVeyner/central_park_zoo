@@ -208,6 +208,17 @@ main .logo-container {
 }
 
 main .logo {
-  padding: 3.5em 0em;
+  padding: 3em 0em;
   width: 60%;
+}
+
+.welcome-text-container { margin: 0px 7em }
+
+.welcome-text {
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.8vw;
+  text-shadow: 1px 3px 3px rgba(0,0,0,0.9);
 }
