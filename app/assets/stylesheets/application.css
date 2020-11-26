@@ -55,10 +55,12 @@ a { text-decoration: none; }
 
 #nav-login-link {
   background-color: var(--button-green);
+  transition: background-color 0.2s ease-in-out;
 }
 
 #nav-signup-link {
   background-color: var(--button-blue);
+  transition: background-color 0.2s ease-in-out;
 }
 
 #nav-login-link:hover { background-color: var(--button-green-hover) }
@@ -114,6 +116,7 @@ a { text-decoration: none; }
   background-color: var(--button-orange);
   width: 48px;
   height: 48px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .logout-container:hover { background-color: var(--button-orange-hover) }
