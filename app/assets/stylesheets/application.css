@@ -46,12 +46,11 @@ a { text-decoration: none; }
   background-color: var(--button-green);
 }
 
-#nav-login-link:hover { background-color: var(--button-green-hover) }
-
 #nav-signup-link {
   background-color: var(--button-blue);
 }
 
+#nav-login-link:hover { background-color: var(--button-green-hover) }
 #nav-signup-link:hover { background-color: var(--button-blue-hover) }
 
  /* Navigation Bar Styling - user logged in  */
