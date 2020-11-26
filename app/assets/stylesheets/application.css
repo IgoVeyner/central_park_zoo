@@ -21,7 +21,7 @@
   --button-orange: #e58a1f;
   --button-orange-hover: #ff8c05;
   --button-blue: #1b71b2;
-  --button-blue-hover: #0175cc;
+  --button-blue-hover: #199CFE;
   --button-green: #36AD47;
   --button-green-hover: #1ac933;
 }
@@ -43,12 +43,16 @@ a { text-decoration: none; }
 }
 
 #nav-login-link {
-  
+  background-color: var(--button-green);
 }
+
+#nav-login-link:hover { background-color: var(--button-green-hover) }
 
 #nav-signup-link {
-
+  background-color: var(--button-blue);
 }
+
+#nav-signup-link:hover { background-color: var(--button-blue-hover) }
 
  /* Navigation Bar Styling - user logged in  */
 .navbar-single, .navbar-double {
