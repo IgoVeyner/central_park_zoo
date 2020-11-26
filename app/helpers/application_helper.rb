@@ -11,4 +11,9 @@ module ApplicationHelper
     page = request.env['PATH_INFO']
     page == '/signup' || page == '/login'
   end
+
+  def on_welcome_page
+    page = request.env['PATH_INFO']
+    page == '/'
+  end
 end
