@@ -25,6 +25,7 @@
   --button-blue-hover: #199CFE;
   --button-green: #36AD47;
   --button-green-hover: #1ac933;
+  --from-brown: #a8916c;
   --main-font: "Brandon Grotesque", Lato, Helvetica, Arial, sans-serif;
 }
 
@@ -234,11 +235,24 @@ main .logo {
   width: 40%;
   padding: 10vh 0px;
   margin: auto;
+  text-align: center;
 }
 
 .form-container form {
   padding: 10vh 0px;
-  text-align: center;
   background-color: white;
   box-shadow: 0 1px 2px rgba(0,0,0,0.25)
+}
+
+.form-header { background-color: var(--from-brown) }
+
+.form-header h1 {
+  margin: 0px;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.85em;
+  padding: 8px 0px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
 }
