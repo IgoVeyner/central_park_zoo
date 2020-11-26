@@ -228,3 +228,8 @@ main .logo {
   background-image: url(paper.png);
   background-repeat: repeat;
 }
+
+.form-container {
+  width: 40%;
+  margin: auto;
+}
