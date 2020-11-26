@@ -240,14 +240,19 @@ main .logo {
 }
 
 .form-container form {
-  padding: 10vh 0px;
+  padding-top: 1px;
+  padding-bottom: 16px;
   background-color: white;
   box-shadow: 0 1px 2px rgba(0,0,0,0.25)
 }
 
+.form-input-container {
+  margin: 24px 0px 8px 0px;
+}
+
 .form-container label {
   display: block;
-  margin: 24px 0px 8px 0px;
+  margin-bottom: 8px;
   color: var(--form-font-color)
 }
 

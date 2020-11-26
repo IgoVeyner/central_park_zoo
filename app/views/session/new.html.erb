@@ -8,17 +8,17 @@
 
     <%= form_tag('/login', method: :post) do %>
 
-      <div>
+      <div class="form-input-container">
         <%= label_tag :name, "Username" %>
         <%= select_tag 'user_name', options_from_collection_for_select(@users, :id, :username) %>
       </div>
 
-      <div>
+      <div class="form-input-container">
         <%= label_tag :password %>
         <%= password_field_tag :password %>
       </div>
 
-      <div>
+      <div class="form-input-container">
         <%= submit_tag("Login") %>
       </div>
 
