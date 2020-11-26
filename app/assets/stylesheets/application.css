@@ -278,6 +278,4 @@ main .logo {
   outline: none;
 }
 
-.form-select {
-  appearance: none;
-}
+.form-select { appearance: none }
