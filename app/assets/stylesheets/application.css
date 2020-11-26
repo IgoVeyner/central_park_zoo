@@ -234,6 +234,7 @@ main .logo {
 .form-container {
   position: relative;
   width: 40%;
+  max-width: 400px;
   padding: 10vh 0px;
   margin: auto;
   text-align: center;
