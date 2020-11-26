@@ -266,7 +266,10 @@ main .logo {
 .form-container label {
   display: block;
   margin-bottom: 8px;
-  color: var(--form-font-color)
+  color: var(--form-font-color);
+  font-family: var(--main-font);
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
 }
 
 .form-input {
@@ -276,6 +279,8 @@ main .logo {
   border-color: lightgrey;
   border-style: solid;
   outline: none;
+  box-sizing: border-box;
+  width: 200px;
 }
 
 .form-select { appearance: none }
