@@ -305,6 +305,7 @@ main .logo {
   margin-top: 8px;
   font-weight: bold;
   font-size: 0.75rem;
+  outline: none;
 }
 
 .login:hover {
