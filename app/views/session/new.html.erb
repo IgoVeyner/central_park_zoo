@@ -1,11 +1,12 @@
 <main class="paper-image">
-  <%= render partial: 'partials/flash_messages' %>
 
   <div class="form-container">
     <div class="form-header">
       <h1>Login with an existing account</h1>
     </div>
 
+    <%= render partial: 'partials/flash_messages' %>
+    
     <%= form_tag('/login', method: :post) do %>
 
       <div class="form-input-container">
