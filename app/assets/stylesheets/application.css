@@ -239,6 +239,19 @@ main .logo {
   text-align: center;
 }
 
+.form-header { background-color: var(--from-brown) }
+
+.form-header h1 {
+  margin: 0px;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.85em;
+  padding: 8px 0px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+
 .form-container form {
   padding-top: 1px;
   padding-bottom: 16px;
@@ -254,17 +267,4 @@ main .logo {
   display: block;
   margin-bottom: 8px;
   color: var(--form-font-color)
-}
-
-.form-header { background-color: var(--from-brown) }
-
-.form-header h1 {
-  margin: 0px;
-  font-family: var(--main-font);
-  text-transform: uppercase;
-  color: white;
-  font-size: 0.85em;
-  padding: 8px 0px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
 }
