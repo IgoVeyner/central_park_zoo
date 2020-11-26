@@ -10,12 +10,12 @@
 
       <div class="form-input-container">
         <%= label_tag :name, "Username" %>
-        <%= select_tag 'user_name', options_from_collection_for_select(@users, :id, :username) %>
+        <%= select_tag 'user_name', options_from_collection_for_select(@users, :id, :username), class: "form-input form-select" %>
       </div>
 
       <div class="form-input-container">
         <%= label_tag :password %>
-        <%= password_field_tag :password %>
+        <%= password_field_tag :password, nil, class: "form-input" %>
       </div>
 
       <div class="form-input-container">

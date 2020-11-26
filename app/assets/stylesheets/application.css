@@ -268,3 +268,16 @@ main .logo {
   margin-bottom: 8px;
   color: var(--form-font-color)
 }
+
+.form-input {
+  padding: 8px;
+  border-width: 1px; 
+  border-radius: 20px;
+  border-color: lightgrey;
+  border-style: solid;
+  outline: none;
+}
+
+.form-select {
+  appearance: none;
+}
