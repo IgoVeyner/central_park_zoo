@@ -321,3 +321,18 @@ main .logo {
 }
 
 .omniauth-icon:hover { filter: invert(0) }
+
+/* Flash Message Styling */
+.message-container {
+  margin: auto;
+  width: 40%;
+  max-width: 400px;
+  background-color: var(--footer-red);
+  text-align: center;
+}
+
+.message-text {
+  font-family: var(--main-font);
+  color: white;
+  margin: 0px;
+}
