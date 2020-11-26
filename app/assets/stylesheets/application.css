@@ -20,6 +20,10 @@
   --nav-black: #181a1b;
   --button-orange: #e58a1f;
   --button-orange-hover: #ff8c05;
+  --button-blue: #1b71b2;
+  --button-blue-hover: #0175cc;
+  --button-green: #36AD47;
+  --button-green-hover: #1ac933;
 }
 
 html, body {
@@ -43,7 +47,7 @@ a { text-decoration: none; }
 }
 
 #nav-signup-link {
-  
+
 }
 
  /* Navigation Bar Styling - user logged in  */
