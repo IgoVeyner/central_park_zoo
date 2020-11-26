@@ -288,7 +288,7 @@ main .logo {
 
 .button {
   width: 200px;
-  padding: 10.1px 0px;
+  padding: 12px 0px;
   border-radius: 20px;
   border-style: none;
   font-family: var(--main-font);
