@@ -201,3 +201,13 @@ footer #nav-signup-link, footer #nav-login-link {
   background-image: url(seal.jpg);
   background-size: cover;
 }
+
+main .logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+main .logo {
+  padding: 3.5em 0em;
+  width: 60%;
+}
