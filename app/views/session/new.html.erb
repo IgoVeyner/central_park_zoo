@@ -22,8 +22,8 @@
         <%= submit_tag("Login", class: "button login") %>
       </div>
 
+      <%= render  partial: 'partials/omniauth', locals: {phrase: "Login"} %>
     <% end %> 
   </div>
 
-  <%= render  partial: 'partials/omniauth', locals: {phrase: "Login"} %>
 </main>
