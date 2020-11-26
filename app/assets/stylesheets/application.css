@@ -247,7 +247,7 @@ main .logo {
   font-family: var(--main-font);
   text-transform: uppercase;
   color: white;
-  font-size: 0.85em;
+  font-size: 0.75em;
   padding: 8px 0px;
   line-height: 1.33;
   letter-spacing: 0.1em;
