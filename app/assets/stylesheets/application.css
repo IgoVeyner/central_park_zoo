@@ -18,6 +18,7 @@
 :root {
   --nav-font-color: #AE9F86;
   --nav-black: #181a1b;
+  --footer-red: #cd4e38;
   --button-orange: #e58a1f;
   --button-orange-hover: #ff8c05;
   --button-blue: #1b71b2;
@@ -145,4 +146,22 @@ a { text-decoration: none; }
 .logout {
   width: 24px;
   margin: 12px 13px 0px;
+}
+
+/* Footer Styling */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer div {
+  background-color: var(--footer-red);
+  text-align: center;
+}
+
+footer h1 {
+  margin: 0px;
+  padding: 24px;
 }
