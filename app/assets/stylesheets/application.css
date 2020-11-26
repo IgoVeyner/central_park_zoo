@@ -285,3 +285,25 @@ main .logo {
 }
 
 .form-select { appearance: none }
+
+.button {
+  width: 200px;
+  padding: 10.1px 0px;
+  border-radius: 20px;
+  border-style: none;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+}
+
+.login {
+  background-color: var(--button-green);
+  transition: background-color 0.2s ease-in-out;
+  color: white;
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.login:hover {
+  background-color: var(--button-green-hover);
+}
