@@ -299,7 +299,7 @@ main .logo {
   background-color: var(--button-green);
   transition: background-color 0.2s ease-in-out;
   color: white;
-  margin-top: 16px;
+  margin-top: 8px;
   font-weight: bold;
   font-size: 0.75rem;
 }
