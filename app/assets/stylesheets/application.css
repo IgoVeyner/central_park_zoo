@@ -24,6 +24,7 @@
   --button-blue-hover: #199CFE;
   --button-green: #36AD47;
   --button-green-hover: #1ac933;
+  --button-font: "Brandon Grotesque", Lato, Helvetica, Arial, sans-serif;
 }
 
 html, body {
@@ -50,7 +51,13 @@ a { text-decoration: none; }
 #nav-signup-link, #nav-login-link {
   display: block;
   color: white;
-  padding: 14.4px;
+  padding: 16.33px 25px;
+  font-family: var(--button-font);
+  font-weight: bold;
+  line-height: 16px;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-align: center;
 }
 
 #nav-login-link {
