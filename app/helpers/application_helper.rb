@@ -7,13 +7,17 @@ module ApplicationHelper
     params[:exhibit_id]
   end
 
+  def current_page
+    request.env['PATH_INFO']
+  end
+
   def on_signup_or_login_page
-    page = request.env['PATH_INFO']
+    page = current_page
     page == '/signup' || page == '/login'
   end
 
   def on_welcome_page
-    page = request.env['PATH_INFO']
+    page = current_page
     page == '/'
   end
 end
