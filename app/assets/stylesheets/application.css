@@ -308,6 +308,12 @@ main .logo {
   background-color: var(--button-green-hover);
 }
 
+.omniauth p {
+  font-size: 0.7rem;
+  font-family: var(--main-font);
+  color: var(--form-font-color)
+}
+
 .omniauth-icon {
   width: 40px;
   filter: invert(0.8);
