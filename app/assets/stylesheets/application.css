@@ -26,6 +26,7 @@
   --button-green: #36AD47;
   --button-green-hover: #1ac933;
   --from-brown: #a8916c;
+  --form-font-color: #706c65;
   --main-font: "Brandon Grotesque", Lato, Helvetica, Arial, sans-serif;
 }
 
@@ -242,6 +243,12 @@ main .logo {
   padding: 10vh 0px;
   background-color: white;
   box-shadow: 0 1px 2px rgba(0,0,0,0.25)
+}
+
+.form-container label {
+  display: block;
+  margin: 24px 0px 8px 0px;
+  color: var(--form-font-color)
 }
 
 .form-header { background-color: var(--from-brown) }
