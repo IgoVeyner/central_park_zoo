@@ -196,7 +196,7 @@ footer #nav-signup-link, footer #nav-login-link {
 
 /* Welcome Page Styling */
 .welcome-image {
-  background-image: url(seal.jpg);
+  background-image: url(/assets/seal.jpg);
   background-size: cover;
 }
 
@@ -223,7 +223,7 @@ main .logo {
 
 /* Form page styling */
 .paper-image {
-  background-image: url(paper.png);
+  background-image: url(/assets/paper.png);
   background-repeat: repeat;
 }
 
