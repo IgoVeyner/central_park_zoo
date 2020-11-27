@@ -39,6 +39,8 @@ html, body {
 
 a { text-decoration: none }
 
+main { height: 93.4vh }
+
   /* Navigation Bar Styling */
 header { overflow-x: hidden }
 
@@ -197,7 +199,6 @@ footer #nav-signup-link, footer #nav-login-link {
 .welcome-image {
   background-image: url(/assets/seal.jpg);
   background-size: cover;
-  height: 90%;
 }
 
 main .logo-container {
@@ -233,10 +234,6 @@ main .logo {
 .signup-form-position { 
   position: relative;
   top: -3em;
-}
-
-.signup-bg-size {
-  height: 93.4vh;
 }
 
 .form-container {
