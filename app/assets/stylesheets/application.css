@@ -352,7 +352,7 @@ main .logo {
 }
 
 /* Errors sytling */
-#error_message {
+#error-message-container {
   position: absolute;
   max-width: 400px;
   width: 40%;
@@ -364,16 +364,16 @@ main .logo {
   font-family: var(--main-font);
 }
 
-#error_message h2 {
+#error-message h2 {
   width: 70%;
   margin: 8px auto;
 }
 
-#error_message ul {
+#error-message ul {
   margin: 0px 0px 8px 0px;
   padding: 0px;
 }
 
-#error_message li {
+#error-message li {
   list-style-type: none;
 }
