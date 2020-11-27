@@ -350,3 +350,30 @@ main .logo {
   padding: 4px;
   font-size: 0.85rem;
 }
+
+/* Errors sytling */
+#error_message {
+  position: absolute;
+  max-width: 400px;
+  width: 40%;
+  top: 8.7rem;
+  text-align: center;
+  background-color: var(--footer-red);
+  color: white;
+  z-index: 1;
+  font-family: var(--main-font);
+}
+
+#error_message h2 {
+  width: 70%;
+  margin: 8px auto;
+}
+
+#error_message ul {
+  margin: 0px 0px 8px 0px;
+  padding: 0px;
+}
+
+#error_message li {
+  list-style-type: none;
+}
