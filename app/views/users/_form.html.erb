@@ -4,7 +4,7 @@
     <%= form_for(user, url: url) do |f| %>
 
       <div class="form-header">
-        <h1>Create a New Account</h1>
+        <h1><%= action %> Account</h1>
       </div>
 
       <%= render partial: "partials/error_messages", locals: { model: user } %>
