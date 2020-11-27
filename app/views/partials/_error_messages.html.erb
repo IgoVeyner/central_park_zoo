@@ -1,6 +1,6 @@
  <% if model.errors.any? %>
   <div id="error-message-container">
-    <button id="error-hide-btn" onclick="hide_error">x</button>
+    <button id="error-hide-btn">x</button>
     <div id="error-message">
       <h2>
         <%= pluralize(model.errors.count, "error") %> prohibited this <%= model.class %> from being saved:
