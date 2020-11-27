@@ -20,4 +20,9 @@ module ApplicationHelper
     page = current_page
     page == '/'
   end
+
+  def on_new_form_page 
+    page = current_page
+    page == "/signup" || page.include?("new")
+  end
 end
