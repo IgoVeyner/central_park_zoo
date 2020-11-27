@@ -14,6 +14,8 @@
         <%= f.text_field :username, class: "form-input" %>
       </div>
 
+      <%= render partial: 'password_field', locals: {f: f} %>
+
       <div class="form-input-container">
         <%= f.label :password %>
         <%= f.password_field :password, class: "form-input" %>
