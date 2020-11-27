@@ -6,12 +6,10 @@
       </h2>
 
       <ul>
-      <% model.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% model.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
-    
-    <p>Click To Close</p>
   </div>
   <% end %>
