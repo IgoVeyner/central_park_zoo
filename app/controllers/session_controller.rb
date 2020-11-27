@@ -19,7 +19,6 @@ class SessionController < ApplicationController
     if auth_hash = request.env["omniauth.auth"]
       @user = User.find_or_create_by_omniauth(auth_hash)
       session[:user_id] = @user.id
-      flash[:message] = "Thanks for logging in via GitHub"
       redirect_to user_path(@user)
     end
   end
