@@ -276,7 +276,7 @@ main .logo {
 }
 
 .form-input {
-  padding: 8px;
+  padding: 8px 13px;
   border-width: 1px; 
   border-radius: 20px;
   border-color: lightgrey;
