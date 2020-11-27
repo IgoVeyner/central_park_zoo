@@ -1,5 +1,6 @@
  <% if model.errors.any? %>
-    <div id="error_message">
+  <div id="error-message-container">
+    <div id="error-message">
       <h2>
         <%= pluralize(model.errors.count, "error") %> prohibited this <%= model.class %> from being saved:
       </h2>
@@ -10,4 +11,5 @@
       <% end %>
       </ul>
     </div>
+  </div>
   <% end %>
