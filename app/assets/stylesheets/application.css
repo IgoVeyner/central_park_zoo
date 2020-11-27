@@ -37,11 +37,9 @@ html, body {
   cursor: default;
 }
 
-main { 
-  height: 85%;
-}
+main { height: 85% }
 
-a { text-decoration: none; }
+a { text-decoration: none }
 
   /* Navigation Bar Styling */
 header { overflow-x: hidden }
@@ -68,9 +66,7 @@ header { overflow-x: hidden }
   font-size: 0.7em;
 }
 
-.navbar-single .nav-link:after {
-  margin: 4px auto;
-}
+.navbar-single .nav-link:after { margin: 4px auto }
 
 #nav-signup-link, #nav-login-link {
   display: block;
@@ -140,7 +136,7 @@ header { overflow-x: hidden }
   transition: transform 200ms ease-in-out;
 }
 
-.nav-link:hover:after{ transform: scaleX(1); }
+.nav-link:hover:after{ transform: scaleX(1) }
 
 .logout-container {
   display: inline-block;
@@ -308,9 +304,7 @@ main .logo {
   outline: none;
 }
 
-.login:hover {
-  background-color: var(--button-green-hover);
-}
+.login:hover { background-color: var(--button-green-hover) }
 
 .omniauth p {
   font-size: 0.7rem;
