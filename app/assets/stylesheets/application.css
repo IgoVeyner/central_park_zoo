@@ -231,6 +231,15 @@ main .logo {
   justify-content: center;
 }
 
+.user-form-bg-size {
+  height: 120vh;
+}
+
+.user-form-position {
+  position: relative;
+  top: -3em;
+}
+
 .signup-form-position { 
   position: relative;
   top: -3em;
