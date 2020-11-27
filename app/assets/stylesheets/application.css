@@ -297,6 +297,8 @@ main .logo {
   text-transform: uppercase;
 }
 
+.button:hover { cursor: pointer }
+
 .login {
   background-color: var(--button-green);
   transition: background-color 0.2s ease-in-out;
