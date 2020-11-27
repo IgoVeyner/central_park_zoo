@@ -37,7 +37,10 @@ html, body {
   cursor: default;
 }
 
-main { height: 85% }
+main { 
+  height: 85%;
+  padding-bottom: 15%;
+}
 
 a { text-decoration: none }
 
