@@ -384,9 +384,12 @@ main .logo {
   float: right;
   border: none;
   font-size: 1.5rem;
-  margin-right: 0.25em;
+  margin-right: 3px;
   color: white;
   outline: none;
+  font-family: cursive;
+  position: relative;
+  top: -6px;
 }
 
 #error-hide-btn:hover { cursor: pointer }
