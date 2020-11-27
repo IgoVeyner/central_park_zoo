@@ -40,7 +40,7 @@
       </div>
 
       <div>
-        <%= f.submit class: "button signup" %>
+        <%= render partial: 'partials/form_submit', locals: {f: f} %>
       </div>
 
       <%= render  partial: 'partials/omniauth', locals: {phrase: "Signup"} %>
