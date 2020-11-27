@@ -37,11 +37,6 @@ html, body {
   cursor: default;
 }
 
-main { 
-  height: 85%;
-  padding-bottom: 15%;
-}
-
 a { text-decoration: none }
 
   /* Navigation Bar Styling */
@@ -50,6 +45,7 @@ header { overflow-x: hidden }
 .navbar-single, .navbar-double {
   background-color: var(--nav-black);
   text-transform: uppercase;
+
 }
 
 .navbar-single ul, .navbar-double ul {
@@ -201,6 +197,7 @@ footer #nav-signup-link, footer #nav-login-link {
 .welcome-image {
   background-image: url(/assets/seal.jpg);
   background-size: cover;
+  height: 90%;
 }
 
 main .logo-container {
@@ -228,14 +225,23 @@ main .logo {
 .paper-image {
   background-image: url(/assets/paper.png);
   background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-form-position { 
+  position: relative;
+  top: -3em;
+}
+
+.signup-bg-size {
+  height: 93.4vh;
 }
 
 .form-container {
-  position: relative;
   width: 40%;
   max-width: 400px;
-  padding: 10vh 0px;
-  margin: auto;
   text-align: center;
 }
 
