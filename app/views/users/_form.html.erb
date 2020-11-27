@@ -1,36 +1,36 @@
-<main>
+<main class="paper-image">
 
-  <div>
+  <div class="form-container">
     <%= form_for(user, url: url) do |f| %>
 
       <%= render partial: "partials/error_messages", locals: { model: user } %>
 
-      <div>
+      <div class="form-input-container">
         <%= f.label :username %>
         <%= f.text_field :username %>
       </div>
 
-      <div>
+      <div class="form-input-container">
         <%= f.label :password %>
         <%= f.password_field :password %>
-      </div>
+      </div class="form-input-container">
 
-      <div>
+      <div class="form-input-container">
         <%= f.label :name %>
         <%= f.text_field :name %>
       </div>
 
-      <div>
+      <div class="form-input-container">
         <%= f.label :birthdate %>
         <%= f.date_field :birthdate %>
       </div>
 
-      <div>
+      <div class="form-input-container">
         <%= f.label :funds %>
         <%= f.number_field :funds %>
       </div>
 
-      <div>
+      <div class="form-input-container">
         <%= f.label :admin, "Are you a zookeeper?" %>
         <%= f.check_box :admin %>
       </div>
