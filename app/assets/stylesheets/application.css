@@ -313,13 +313,12 @@ main .logo {
 }
 
 .login { background-color: var(--button-green) }
+.login:hover { background-color: var(--button-green-hover) }
 
 .signup { background-color: var(--button-blue) }
+.signup:hover { background-color: var(--button-blue-hover) }
 
 .edit { background-color: var(--button-blue2) }
-
-.login:hover { background-color: var(--button-green-hover) }
-.signup:hover { background-color: var(--button-blue-hover) }
 .edit:hover { background-color: var(--button-blue2-hover);}
 
 .omniauth p {
