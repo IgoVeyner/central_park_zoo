@@ -23,6 +23,8 @@
   --button-orange-hover: #ff8c05;
   --button-blue: #1b71b2;
   --button-blue-hover: #199CFE;
+  --button-blue2: #395060;
+  --button-blue2-hover: #456175;
   --button-green: #36AD47;
   --button-green-hover: #1ac933;
   --from-brown: #a8916c;
@@ -300,7 +302,7 @@ main .logo {
 
 .button:hover { cursor: pointer }
 
-.login, .signup {
+.login, .signup, .edit {
   color: white;
   margin-top: 8px;
   font-weight: bold;
@@ -319,8 +321,14 @@ main .logo {
   transition: background-color 0.2s ease-in-out;
 }
 
+.edit {
+  background-color: var(--button-blue2);
+  transition: background-color 0.2s ease-in-out;
+}
+
 .login:hover { background-color: var(--button-green-hover) }
 .signup:hover { background-color: var(--button-blue-hover) }
+.edit:hover { background-color: var(--button-blue2-hover);}
 
 .omniauth p {
   font-size: 0.7rem;
