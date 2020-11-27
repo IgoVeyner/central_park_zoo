@@ -1,17 +1,18 @@
  <% if model.errors.any? %>
   <div id="error-message-container">
+  
     <button id="error-hide-btn">x</button>
-    <div id="error-message">
-      <h2>
-        <%= pluralize(model.errors.count, "error") %> prohibited this <%= model.class %> from being saved:
-      </h2>
 
-      <ul>
-        <% model.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+    <h2>
+      <%= pluralize(model.errors.count, "error") %> prohibited this <%= model.class %> from being saved:
+    </h2>
+
+    <ul>
+      <% model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+
   </div>
 
   <script>

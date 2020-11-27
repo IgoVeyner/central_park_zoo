@@ -365,17 +365,17 @@ main .logo {
   box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
-#error-message h2 {
+#error-message-container h2 {
   width: 70%;
   margin: 8px auto;
 }
 
-#error-message ul {
+#error-message-container ul {
   margin: 0px 0px 8px 0px;
   padding: 0px;
 }
 
-#error-message li {
+#error-message-container li {
   list-style-type: none;
 }
 
