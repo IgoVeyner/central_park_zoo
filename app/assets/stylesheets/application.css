@@ -309,22 +309,14 @@ main .logo {
   font-size: 0.75rem;
   outline: none;
   letter-spacing: 0.05rem;
-}
-
-.login {
-  background-color: var(--button-green);
   transition: background-color 0.2s ease-in-out;
 }
 
-.signup {
-  background-color: var(--button-blue);
-  transition: background-color 0.2s ease-in-out;
-}
+.login { background-color: var(--button-green) }
 
-.edit {
-  background-color: var(--button-blue2);
-  transition: background-color 0.2s ease-in-out;
-}
+.signup { background-color: var(--button-blue) }
+
+.edit { background-color: var(--button-blue2) }
 
 .login:hover { background-color: var(--button-green-hover) }
 .signup:hover { background-color: var(--button-blue-hover) }
