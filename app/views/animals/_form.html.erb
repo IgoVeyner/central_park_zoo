@@ -1,4 +1,4 @@
-<main class="paper-image">
+<main class="paper-image animal-form-bg-size"">
     
   <%= render partial: "partials/error_messages", locals: { model: animal } %>
     
@@ -41,7 +41,9 @@
         <%= f.select :species_id, options_from_collection_for_select(species, :id, :name), {}, {class: "form-input form-select"} %>
       </div>
 
-      <%= f.submit %>
+      <div class="form-input-container">
+        <%= render partial: 'partials/form_submit', locals: {f: f} %>
+      </div>
     <% end %>
   </div>
 </main>

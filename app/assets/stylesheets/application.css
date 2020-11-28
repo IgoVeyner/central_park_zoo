@@ -233,9 +233,8 @@ main .logo {
   justify-content: center;
 }
 
-.user-form-bg-size {
-  height: 120vh;
-}
+.user-form-bg-size { height: 120vh }
+.animal-form-bg-size { height: 128vh }
 
 .form-container {
   width: 40%;
