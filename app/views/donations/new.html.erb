@@ -4,21 +4,27 @@
   <div class="form-container">
     <%= form_for @donation, url: species_donations_path do |f| %>
 
-      <%= render partial: 'partials/flash_messages' %>
-      
-      <div>
-        <%= f.label :amount %>
-        <%= f.number_field :amount %>
+      <div class="form-header">
+        <h1>New Donation</h1>
       </div>
 
-      <div>
+      <%= render partial: 'partials/flash_messages' %>
+      
+      <div class="form-input-container">
+        <%= f.label :amount %>
+        <%= f.number_field :amount, class: "form-input" %>
+      </div>
+
+      <div class="form-input-container">
         <%= f.label :comment %>
-        <%= f.text_field :comment %>
+        <%= f.text_field :comment, class: "form-input" %>
       </div>
 
       <%= f.hidden_field :species_id, value: params[:species_id] %>
 
-      <%= f.submit %>
+      <div class="form-input-container">
+        <%= render partial: 'partials/form_submit', locals: {f: f} %>
+      </div>
     <% end %>
   </div>
 </main>
