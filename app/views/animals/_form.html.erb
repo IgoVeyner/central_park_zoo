@@ -1,40 +1,45 @@
-<h2><%= action %> Animal</h2>
-
-<%= form_for animal do |f| %>
-
+<main class="paper-image">
+    
   <%= render partial: "partials/error_messages", locals: { model: animal } %>
+    
+  <div class="form-container">
+    <%= form_for animal do |f| %>
 
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+      <h2><%= action %> Animal</h2>
+
+      <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      
+      <div>
+        <%= f.label :age %>
+        <%= f.number_field :age %>
+      </div>
+
+      <div>
+        <%= f.label :weight %>
+        <%= f.number_field :weight %>
+      </div>
+
+      <div>
+        <%= f.label :image_url %>
+        <%= f.text_field :image_url %>
+      </div>
+
+      <div>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+      </div>
+
+      <%= render partial: 'exhibit_input', locals: {f: f, exhibits: exhibits, exhibit: exhibit} %>
+
+      <div>
+        <%= f.label :species_id, "Species" %>
+        <%= f.select :species_id, options_from_collection_for_select(species, :id, :name) %>
+      </div>
+
+      <%= f.submit %>
+    <% end %>
   </div>
-  
-  <div>
-    <%= f.label :age %>
-    <%= f.number_field :age %>
-  </div>
-
-  <div>
-    <%= f.label :weight %>
-    <%= f.number_field :weight %>
-  </div>
-
-  <div>
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
-  </div>
-
-  <div>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
-
-  <%= render partial: 'exhibit_input', locals: {f: f, exhibits: exhibits, exhibit: exhibit} %>
-
-  <div>
-    <%= f.label :species_id, "Species" %>
-    <%= f.select :species_id, options_from_collection_for_select(species, :id, :name) %>
-  </div>
-
-  <%= f.submit %>
-<% end %>
+</main>
