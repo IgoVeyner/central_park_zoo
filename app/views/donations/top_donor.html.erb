@@ -1,3 +1,7 @@
-<h1>Total Donation Amount:</h1>
-<h1>$<%= total_donation_amount @user, @species %></h1>
-<%= render partial: "users/info", locals: {user: @user} %>
+<main class="wavy-image">
+  <div class="show-container">
+    <h1>Total Donation Amount:</h1>
+    <h1>$<%= total_donation_amount @user, @species %></h1>
+    <%= render partial: "users/info", locals: {user: @user} %>
+  </div>
+</main>
