@@ -3,7 +3,7 @@ class Donation < ApplicationRecord
   belongs_to :species
 
   validates :amount, presence: true
-  validates :amount, numericality: {greater_than: 0}
+  validates :amount, numericality: {greater_than: 0, less_than_or_equal_to: 1000000}
   validates :comment, length: { maximum: 300 }
 
   def add_donation
