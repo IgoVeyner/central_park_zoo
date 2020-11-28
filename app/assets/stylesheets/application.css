@@ -415,7 +415,7 @@ main .logo {
   background: white;
   position: relative;
   top: -3em;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 2px rgba(0,1,2,0.25);
 }
 
 .show-header { background-color: var(--from-brown) }
@@ -428,4 +428,12 @@ main .logo {
   padding: 14px 0px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+}
+
+.show-sub-container { margin: 1em 0px}
+
+.show-sub-container h2 {
+  font-family: var(--main-font);
+  margin: 0px;
+  color: var(--form-font-color);
 }
