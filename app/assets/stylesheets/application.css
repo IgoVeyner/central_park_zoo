@@ -438,6 +438,13 @@ main .logo {
   color: var(--form-font-color);
 }
 
+.show-sub-container h3 {
+  margin: 0px 8px;
+  font-family: var(--main-font);
+  font-size: 0.85rem;
+  color: var(--form-font-color);
+}
+
 .show-link-container {
   display: flex;
   align-items: center;
