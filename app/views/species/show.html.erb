@@ -1,20 +1,24 @@
 <%= render partial: 'partials/flash_messages' %>
 
-<h1><%= @species.name %></h1>
-<h2><%= @species.common_name if @species.common_name %></h2>
+<main class="wavy-image">
+  <div class="show-container">
+    <h1><%= @species.name %></h1>
+    <h2><%= @species.common_name if @species.common_name %></h2>
 
-<img src="<%= @species.image_url %>" alt="">
+    <img src="<%= @species.image_url %>" alt="">
 
-<h2>Conservation Status: <%= @species.conservation_status %></h2>
-<h3><%= @species.description %></h3>
- 
-<h2>Donation Total: <%= @species.donation_total %></h2>
+    <h2>Conservation Status: <%= @species.conservation_status %></h2>
+    <h3><%= @species.description %></h3>
+    
+    <h2>Donation Total: <%= @species.donation_total %></h2>
 
-<h2><%= link_to  "Donate", new_species_donation_path(@species) %></h2>
-<h2><%= link_to  "All Donations", species_donations_path(@species) %></h2>
-<h2><%= link_to  "Top Donor", species_top_donor_path(@species) %></h2>
+    <h2><%= link_to  "Donate", new_species_donation_path(@species) %></h2>
+    <h2><%= link_to  "All Donations", species_donations_path(@species) %></h2>
+    <h2><%= link_to  "Top Donor", species_top_donor_path(@species) %></h2>
 
-<% if is_admin %>
-  <%= link_to  "Edit Species", edit_species_path(@species) %>
-  <%= link_to  "Delete Species", species_path(@species), method: :delete %>
-<% end %>
+    <% if is_admin %>
+      <%= link_to  "Edit Species", edit_species_path(@species) %>
+      <%= link_to  "Delete Species", species_path(@species), method: :delete %>
+    <% end %>
+  </div>
+</main>
