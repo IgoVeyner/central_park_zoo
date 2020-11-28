@@ -2,7 +2,10 @@
 
 <main class="wavy-image">
   <div class="show-container">
-    <h1><%= @species.name %></h1>
+
+    <div class="show-header">
+      <h1><%= @species.name %></h1>
+    </div>  
     <h2><%= @species.common_name if @species.common_name %></h2>
 
     <img src="<%= @species.image_url %>" alt="">
