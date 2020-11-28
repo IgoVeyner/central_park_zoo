@@ -302,7 +302,7 @@ main .logo {
 
 .button:hover { cursor: pointer }
 
-.login, .signup, .edit, .button2 {
+.login, .signup, .edit, .button2, .button3, .delete {
   color: white;
   margin-top: 8px;
   font-weight: bold;
@@ -461,7 +461,18 @@ main .logo {
   margin-top: 0px;
  }
 
+ .button3 {
+   background-color: #05a2ba;
+ }
+
+ .button3:hover { background-color: #02aec9 }
+ 
+.delete {
+  background-color: var(--button-orange);
+}
+  
 .button2:hover { background-color: #527e9b }
+.delete:hover { background-color: var(--button-orange-hover);}
 
 .show-container img {
   max-width: 400px;
