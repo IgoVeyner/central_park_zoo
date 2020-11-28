@@ -2,9 +2,16 @@
   <h1>Username: <%= user.username %></h1>
 </div>
 
-<h2><%= user.name %></h2>
+<div class="show-sub-container">
+  <h2>Name: <%= user.name %></h2>
+</div>
 
 <% if has_access %>  
-  <h2><%= user.birthdate ? user.birthdate : "No Birthdate Set" %></h2>
-  <h2>$<%= user.funds %></h2>
+  <div class="show-sub-container">
+    <h2>Birthdate: <%= user.birthdate ? user.birthdate : "No Birthdate Set" %></h2>
+  </div>
+
+  <div class="show-sub-container">
+    <h2>$<%= user.funds %></h2>
+  </div>
 <% end %>
