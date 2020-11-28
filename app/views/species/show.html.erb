@@ -26,13 +26,13 @@
     </div>
 
     <div class="show-link-container">
-      <h2><%= link_to  "Donate", new_species_donation_path(@species) %></h2>
-      <h2><%= link_to  "All Donations", species_donations_path(@species) %></h2>
-      <h2><%= link_to  "Top Donor", species_top_donor_path(@species) %></h2>
+      <%= link_to  "Donate", new_species_donation_path(@species), class: "button" %>
+      <%= link_to  "All Donations", species_donations_path(@species), class: "button button3" %>
+      <%= link_to  "Top Donor", species_top_donor_path(@species), class: "button button2" %>
 
       <% if is_admin %>
-        <%= link_to  "Edit Species", edit_species_path(@species) %>
-        <%= link_to  "Delete Species", species_path(@species), method: :delete %>
+        <%= link_to  "Edit Species", edit_species_path(@species), class: "button edit" %>
+        <%= link_to  "Delete Species", species_path(@species), method: :delete, class: "button delete" %>
       <% end %>
     </div>
   </div>
