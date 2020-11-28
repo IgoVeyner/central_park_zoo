@@ -1,29 +1,34 @@
-<h2><%= action %> Exhibit</h2>
-
-<%= form_for exhibit do |f| %>
+<main class="paper-image">
 
   <%= render partial: "partials/error_messages", locals: { model: exhibit } %>
 
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-container">
+    <%= form_for exhibit do |f| %>
+
+    <h2><%= action %> Exhibit</h2>
+
+      <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div>
+        <%= f.label :biome %>
+        <%= f.text_field :biome %>
+      </div>
+
+      <div>
+        <%= f.label :image_url %>
+        <%= f.text_field :image_url %>
+      </div>
+
+      <div>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+      </div>
+
+      <%= f.submit %>
+
+    <% end %>
   </div>
-
-  <div>
-    <%= f.label :biome %>
-    <%= f.text_field :biome %>
-  </div>
-
-  <div>
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
-  </div>
-
-  <div>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
-
-  <%= f.submit %>
-
-<% end %>
+</main>
