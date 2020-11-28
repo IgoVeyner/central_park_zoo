@@ -1,8 +1,12 @@
-<%= render partial: 'partials/flash_messages' %>
+<main class="wavy-image">
+  <div class="show-container">
+    <%= render partial: 'partials/flash_messages' %>
 
-<%= render partial: 'info', locals: {user: @user} %>
+    <%= render partial: 'info', locals: {user: @user} %>
 
-<% if has_access %>
-  <%= link_to  "My Donations", user_donations_path(@user) %>
-  <%= link_to  "Edit", edit_user_path(@user) %>
-<% end %>
+    <% if has_access %>
+      <%= link_to  "My Donations", user_donations_path(@user) %>
+      <%= link_to  "Edit", edit_user_path(@user) %>
+    <% end %>
+  </div>
+</main>
