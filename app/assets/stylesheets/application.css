@@ -455,3 +455,8 @@ main .logo {
  }
 
 .button2:hover { background-color: #527e9b }
+
+.show-container img {
+  max-width: 400px;
+  max-height: 400px;
+}
