@@ -395,3 +395,6 @@ main .logo {
 #error-hide-btn:hover { cursor: pointer }
 
 .hidden { display: none }
+
+.field_with_errors label { color: var(--footer-red) }
+.field_with_errors input { border-color: var(--footer-red) }
