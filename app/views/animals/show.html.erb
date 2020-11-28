@@ -1,17 +1,22 @@
-<h1><%= @animal.name %></h1>
+<main class="wavy-image animal-bg-size">
+  <div class="show-container">
 
-<img src="<%= @animal.image_url %>" alt="">
+    <h1><%= @animal.name %></h1>
 
-<h2><%= @animal.age %> years old</h2>
-<h2><%= @animal.weight %> lbs.</h2>
-<h2>Species: <%= link_to @animal.species.name, species_path(@animal.species) %></h2>
+    <img src="<%= @animal.image_url %>" alt="">
 
-<%= render partial: 'common_name', locals: { animal: @animal } %>
+    <h2><%= @animal.age %> years old</h2>
+    <h2><%= @animal.weight %> lbs.</h2>
+    <h2>Species: <%= link_to @animal.species.name, species_path(@animal.species) %></h2>
 
-<h2>Exhibit: <%= link_to @animal.exhibit.name, exhibit_path(@animal.exhibit) %></h2>
-<h3><%= @animal.description %></h3>
+    <%= render partial: 'common_name', locals: { animal: @animal } %>
 
-<% if is_admin %>
-  <%= link_to  "Edit Animal", edit_animal_path(@animal) %>
-  <%= link_to  "Delete Animal", animal_path(@animal), method: :delete %>
-<% end %>
+    <h2>Exhibit: <%= link_to @animal.exhibit.name, exhibit_path(@animal.exhibit) %></h2>
+    <h3><%= @animal.description %></h3>
+
+    <% if is_admin %>
+      <%= link_to  "Edit Animal", edit_animal_path(@animal) %>
+      <%= link_to  "Delete Animal", animal_path(@animal), method: :delete %>
+    <% end %>
+  </div>
+</main>
