@@ -5,36 +5,41 @@
   <div class="form-container">
     <%= form_for species do |f| %>
 
-    <h2><%= action %> Species</h2>
-
-      <div>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+      <div class="form-header">
+        <h1><%= action %> Species</h1>
       </div>
 
-      <div>
+      <div class="form-input-container">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-input" %>
+      </div>
+
+      <div class="form-input-container">
         <%= f.label :common_name %>
-        <%= f.text_field :common_name %>
+        <%= f.text_field :common_name, class: "form-input" %>
       </div>
       
-      <div>
+      <div class="form-input-container">
         <%= f.label :image_url %>
-        <%= f.text_field :image_url %>
+        <%= f.text_field :image_url, class: "form-input" %>
       </div>
 
-      <div>
+      <div class="form-input-container">
         <%= f.label :conservation_status %>
         <%= f.select :conservation_status, options_for_select(
           ["Extinct", "Extinct in the Wild", "Critically Endangered", "Endangered", "Vulnerable",
-          "Near Threatened", "Conservation Dependent", "Least Concern", "Data Deficient", "Not Evaluated"]) %>
+          "Near Threatened", "Conservation Dependent", "Least Concern", "Data Deficient", "Not Evaluated"]),
+          {}, {class: "form-input form-select"} %>
       </div>
 
-      <div>
+      <div class="form-input-container">
         <%= f.label :description %>
-        <%= f.text_field :description %>
+        <%= f.text_field :description, class: "form-input" %>
       </div>
 
-      <%= f.submit %>
+      <div class="form-input-container">
+        <%= render partial: 'partials/form_submit', locals: {f: f} %>
+      </div>
     <% end %>
   </div>
 </main>
