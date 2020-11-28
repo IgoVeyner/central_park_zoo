@@ -5,8 +5,10 @@
     <%= render partial: 'info', locals: {user: @user} %>
 
     <% if has_access %>
-      <%= link_to  "My Donations", user_donations_path(@user) %>
-      <%= link_to  "Edit", edit_user_path(@user) %>
+      <div class="show-link-container">
+        <%= link_to  "My Donations", user_donations_path(@user), class: "button button2" %>
+        <%= link_to  "Edit", edit_user_path(@user), class: "button edit" %>
+      </div>
     <% end %>
   </div>
 </main>
