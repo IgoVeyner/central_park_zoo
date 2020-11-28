@@ -15,12 +15,14 @@
       <h3><%= @exhibit.description %></h3>
     </div>
 
-    <%= link_to  "Animals", exhibit_animals_path(@exhibit) %>
-    <%= link_to  "Species", exhibit_species_index_path(@exhibit) %>
+    <div class="show-link-container">
+      <%= link_to  "Animals", exhibit_animals_path(@exhibit) %>
+      <%= link_to  "Species", exhibit_species_index_path(@exhibit) %>
 
-    <% if is_admin %>
-      <%= link_to  "Edit Exhibit", edit_exhibit_path(@exhibit) %>
-      <%= link_to  "Delete Exhibit", exhibit_path(@exhibit), method: :delete %>
-    <% end %>
+      <% if is_admin %>
+        <%= link_to  "Edit Exhibit", edit_exhibit_path(@exhibit) %>
+        <%= link_to  "Delete Exhibit", exhibit_path(@exhibit), method: :delete %>
+      <% end %>
+    </div>
   </div>
 </main>
