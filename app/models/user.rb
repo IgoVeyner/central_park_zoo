@@ -38,4 +38,8 @@ class User < ApplicationRecord
   def total_donations_by_species(species)
     self.donations.where("species_id = #{species.id}").sum(:amount)
   end
+
+  def birthdate_to_string
+    self.birthdate.strftime(" %B %e, %Y")
+  end
 end
