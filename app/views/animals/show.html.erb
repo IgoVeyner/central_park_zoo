@@ -30,8 +30,10 @@
     </div>
 
     <% if is_admin %>
-      <%= link_to  "Edit Animal", edit_animal_path(@animal) %>
-      <%= link_to  "Delete Animal", animal_path(@animal), method: :delete %>
+      <div class="show-link-container">
+        <%= link_to  "Edit Animal", edit_animal_path(@animal), class: "button edit" %>
+        <%= link_to  "Delete Animal", animal_path(@animal), method: :delete, class: "button delete" %>
+      </div>
     <% end %>
   </div>
 </main>
