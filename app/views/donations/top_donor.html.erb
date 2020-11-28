@@ -1,5 +1,10 @@
 <main class="wavy-image">
   <div class="show-container">
+
+    <div class="show-header">
+      <h1>Top Donor</h1>
+    </div>
+
     <h1>Total Donation Amount:</h1>
     <h1>$<%= total_donation_amount @user, @species %></h1>
     <%= render partial: "users/info", locals: {user: @user} %>
