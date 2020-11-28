@@ -5,8 +5,14 @@
       <h1>Top Donor</h1>
     </div>
 
-    <h1>Total Donation Amount:</h1>
-    <h1>$<%= total_donation_amount @user, @species %></h1>
+    <div class="show-sub-container">
+      <h2>Total Donation Amount:</h2> 
+    </div>
+
+    <div class="show-sub-container">
+      <h2>$<%= total_donation_amount @user, @species %></h2>
+    </div>
+
     <%= render partial: "users/info", locals: {user: @user} %>
   </div>
 </main>
