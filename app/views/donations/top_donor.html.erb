@@ -13,6 +13,8 @@
       <h2>$<%= total_donation_amount @user, @species %></h2>
     </div>
 
-    <%= render partial: "users/info", locals: {user: @user} %>
+    <div class="show-sub-container">
+      <h2>by: <%= link_to @user.username, user_path(@user) %></h2>
+    </div>
   </div>
 </main>
