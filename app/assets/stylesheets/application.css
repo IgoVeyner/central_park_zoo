@@ -462,17 +462,20 @@ main .logo {
  }
 
  .button3 {
-   background-color: #05a2ba;
+   background-color: #3F85A1;
+   margin-bottom: 1em;
+   margin-top: 0px;
  }
 
- .button3:hover { background-color: #02aec9 }
+ .button3:hover { background-color: #4F8AA1 }
  
 .delete {
-  background-color: var(--button-orange);
+  background-color: var(--footer-red);
+  margin-top: 1em;
 }
   
 .button2:hover { background-color: #527e9b }
-.delete:hover { background-color: var(--button-orange-hover);}
+.delete:hover { background-color: #E64234 }
 
 .show-container img {
   max-width: 400px;
