@@ -3,6 +3,6 @@
 <% else %>
   <div class="form-input-container">
     <%= f.label :exhibit_id, "Exhibit" %>
-    <%= f.select :exhibit_id, options_from_collection_for_select(exhibits, :id, :name) %>
+    <%= f.select :exhibit_id, options_from_collection_for_select(exhibits, :id, :name), {}, {class: "form-input form-select"} %>
   </div>
 <% end %>
