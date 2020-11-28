@@ -398,3 +398,12 @@ main .logo {
 
 .field_with_errors label { color: var(--footer-red) }
 .field_with_errors input { border-color: var(--footer-red) }
+
+/* Show Page Styling */
+.wavy-image {
+  background-image: url("/assets/waves-light.jpg");
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
