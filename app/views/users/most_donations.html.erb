@@ -1,4 +1,13 @@
-<h1><%= @user.donations.count %> Donations</h1>
-<h2>Average Donation Amount: $<%= average_donation_amount @user %></h2>
+<main class="wavy-image">
+  <div class="show-container">
+    <%= render  partial: "info", locals: {user: @user} %>
 
-<%= render  partial: "info", locals: {user: @user} %>
+    <div class="show-sub-container">
+      <h2>Total Donations: <%= @user.donations.count %></h1>
+    </div>
+    
+    <div class="show-sub-container">
+      <h2>Average Donation Amount: $<%= average_donation_amount @user %></h2>
+    </div>
+  </div>
+</main>
