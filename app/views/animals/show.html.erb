@@ -1,18 +1,33 @@
 <main class="wavy-image animal-bg-size">
   <div class="show-container">
 
-    <h1><%= @animal.name %></h1>
+    <div class="show-header">
+      <h1><%= @animal.name %></h1>
+    </div>
 
     <img src="<%= @animal.image_url %>" alt="">
 
-    <h2><%= @animal.age %> years old</h2>
-    <h2><%= @animal.weight %> lbs.</h2>
-    <h2>Species: <%= link_to @animal.species.name, species_path(@animal.species) %></h2>
+    <div class="show-sub-container">
+      <h2><%= @animal.age %> years old</h2>
+    </div>
+    
+    <div class="show-sub-container">
+      <h2><%= @animal.weight %> lbs.</h2>
+    </div>
+
+    <div class="show-sub-container">
+      <h2>Species: <%= link_to @animal.species.name, species_path(@animal.species) %></h2>
+    </div>
 
     <%= render partial: 'common_name', locals: { animal: @animal } %>
 
-    <h2>Exhibit: <%= link_to @animal.exhibit.name, exhibit_path(@animal.exhibit) %></h2>
-    <h3><%= @animal.description %></h3>
+    <div class="show-sub-container">
+      <h2>Exhibit: <%= link_to @animal.exhibit.name, exhibit_path(@animal.exhibit) %></h2>
+    </div>
+
+    <div class="show-sub-container">
+      <h3><%= @animal.description %></h3>
+    </div>
 
     <% if is_admin %>
       <%= link_to  "Edit Animal", edit_animal_path(@animal) %>
