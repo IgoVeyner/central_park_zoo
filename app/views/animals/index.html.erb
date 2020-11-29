@@ -15,11 +15,9 @@
 
     <ul>
       <% @animals.each do |animal| %>
-      
-        <li>
+        <li class="index-li">
           <%= render partial: 'list_info', locals: { animal: animal, exhibit: @exhibit} %>
         </li>
-        
       <% end %>
     </ul>
   </div>
