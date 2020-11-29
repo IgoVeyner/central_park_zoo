@@ -15,7 +15,9 @@
 
     <ul>
       <% @exhibits.each do |exhibit| %>
-        <li><%= link_to  exhibit.name, exhibit_path(exhibit) %></li>
+        <div class="index-card">
+          <li><%= link_to  exhibit.name, exhibit_path(exhibit) %></li>
+        </div>
       <% end %>
     </ul>
   </div>
