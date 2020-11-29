@@ -1,11 +1,14 @@
 <%= render partial: 'partials/flash_messages' %>
 
+<main class="wavy-image">
+  <div class="index-container">
+    <%= link_to  "New Exhibit", new_exhibit_path(@exhibit) if is_admin %>
+
+    <ul>
+      <% @exhibits.each do |exhibit| %>
+        <li><%= link_to  exhibit.name, exhibit_path(exhibit) %></li>
+      <% end %>
+    </ul>
+  </div>
+</main>
 <h1>Our Exhibits</h1>
-
-<%= link_to  "New Exhibit", new_exhibit_path(@exhibit) if is_admin %>
-
-<ul>
-  <% @exhibits.each do |exhibit| %>
-    <li><%= link_to  exhibit.name, exhibit_path(exhibit) %></li>
-  <% end %>
-</ul>
