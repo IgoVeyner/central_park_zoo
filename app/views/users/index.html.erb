@@ -3,7 +3,9 @@
   <div class="index-container">
 
     <%= render partial: 'users', locals: {users: @users, phrase: "Guests"} %>
-
-    <h2><%= link_to  "Most Donations", most_donation_path %></h2>
+    
+    <div class="index-link-container">
+      <%= link_to  "Most Donations", most_donation_path, class: "button button2" %>
+    </div>
   </div>
 </main>

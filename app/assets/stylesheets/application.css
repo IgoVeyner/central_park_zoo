@@ -528,3 +528,12 @@ main .logo {
   line-height: 1.33;
   letter-spacing: 0.1em;
 }
+
+.index-link-container {
+  border-top: lightgrey 1px solid;
+  padding: 1em 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
