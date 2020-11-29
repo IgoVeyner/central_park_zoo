@@ -5,9 +5,9 @@
       <h1>Donations</h1>
     </div>
 
-    <ul>
+    <ul class="donation-ul">
       <% @donations.each do |donation| %>
-        <li>
+        <li class="donation-li">
           $<%= donation.amount %>
 
           <%= render partial: 'link', locals: { donation: donation } %>

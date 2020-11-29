@@ -545,3 +545,6 @@ main .logo {
   color: var(--nav-font-color);
   font-family: var(--main-font);
 }
+
+.donation-ul { flex-direction: column; }
+.donation-li { padding: 2px 0px}
