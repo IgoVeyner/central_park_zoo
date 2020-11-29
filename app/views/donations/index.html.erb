@@ -1,13 +1,17 @@
-<h1>Donations</h1>
+<main class="wavy-image">
+  <div class="index-container">
+    <h1>Donations</h1>
 
-<ul>
-  <% @donations.each do |donation| %>
-    <li>
-      $<%= donation.amount %>
+    <ul>
+      <% @donations.each do |donation| %>
+        <li>
+          $<%= donation.amount %>
 
-      <%= render partial: 'link', locals: { donation: donation } %>
+          <%= render partial: 'link', locals: { donation: donation } %>
 
-      <%= donation.created_at.strftime(" on %B %e, %Y") %>
-    </li>
-  <% end %>
-</ul>
+          <%= donation.created_at.strftime(" on %B %e, %Y") %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</main>
