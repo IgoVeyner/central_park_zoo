@@ -1,15 +1,19 @@
 <%= render partial: 'partials/flash_messages' %>
 
-<h1>Animals</h1>
+<main class="wavy-image">
+  <div class="index-container">
+    <h1>Animals</h1>
 
-<%= link_to  "New Animal", set_url if is_admin %>
+    <%= link_to  "New Animal", set_url if is_admin %>
 
-<ul>
-  <% @animals.each do |animal| %>
-  
-    <li>
-      <%= render partial: 'list_info', locals: { animal: animal, exhibit: @exhibit} %>
-    </li>
-    
-  <% end %>
-</ul>
+    <ul>
+      <% @animals.each do |animal| %>
+      
+        <li>
+          <%= render partial: 'list_info', locals: { animal: animal, exhibit: @exhibit} %>
+        </li>
+        
+      <% end %>
+    </ul>
+  </div>
+</main>
