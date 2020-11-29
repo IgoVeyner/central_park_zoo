@@ -539,3 +539,9 @@ main .logo {
 
 .index-link-container { border-top: lightgrey 1px solid; }
 
+.index-li { padding: 8px }
+
+.index-li a {
+  color: var(--nav-font-color);
+  font-family: var(--main-font);
+}
