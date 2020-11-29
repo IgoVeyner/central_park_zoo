@@ -529,11 +529,13 @@ main .logo {
   letter-spacing: 0.1em;
 }
 
-.index-link-container {
-  border-top: lightgrey 1px solid;
+.index-link-container, .index-link-container-top {
   padding: 1em 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
+.index-link-container { border-top: lightgrey 1px solid; }
+/* .index-link-container-top { border-bottom: lightgrey 1px solid; } */
