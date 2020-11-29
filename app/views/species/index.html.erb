@@ -7,7 +7,11 @@
       <h1>Our Species</h1>
     </div>
 
-    <%= link_to  "New Species", new_species_path(@species) if is_admin %>
+    <% if is_admin %>
+      <div class="index-link-container-top">
+        <%= link_to  "New Species", new_species_path(@species), class: "button login" %>
+      </div>
+    <% end %>
 
     <ul>
       <% @species_all.each do |species| %>
