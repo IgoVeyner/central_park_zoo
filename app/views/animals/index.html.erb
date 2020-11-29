@@ -7,7 +7,11 @@
       <h1>Our Animals</h1>
     </div>
 
-    <%= link_to  "New Animal", set_url if is_admin %>
+    <% if is_admin %>
+      <div class="index-link-container-top">
+        <%= link_to  "New Animal", set_url, class: "button login" %>
+      </div>
+    <% end %>
 
     <ul>
       <% @animals.each do |animal| %>
