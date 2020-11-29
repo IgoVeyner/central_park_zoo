@@ -493,3 +493,14 @@ main .logo {
 .species-bg-size { height: 160vh }
 
 #animal-edit { margin-top: 0px;}
+
+/* Index Page Styling */
+.index-container {
+  width: 60%;
+  max-width: 800px;
+  text-align: center;
+  background: white;
+  position: relative;
+  top: -3em;
+  box-shadow: 0 1px 2px rgba(0,1,2,0.25);
+}
