@@ -4,6 +4,9 @@ COVID19 hits NYC in March hard and a lockdown starts. To continue to contribute 
 
 Users are able to signup / login. Browse through the exhibits, species and animals. They can make a donation to help the conservation of a species.
 
+## Usage
+To use this app, just clone, run 'rails db:migrate', run 'rails db:seed' and then start the server with 'rails s'. Everything should be set up!
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
