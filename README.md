@@ -7,6 +7,9 @@ Users are able to signup / login. Browse through the exhibits, species and anima
 ## Usage
 To use this app, just clone, run 'rails db:migrate', run 'rails db:seed' and then start the server with 'rails s'. Everything should be set up!
 
+## Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/IgoVeyner/central_park_zoo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
