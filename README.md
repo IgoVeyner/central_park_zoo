@@ -1,4 +1,8 @@
-# README
+# Central Park Zoo rails app
+
+COVID19 hits NYC in March hard and a lockdown starts. To continue to contribute to conservation efforts, animal rehabilitaion, and pay their employees, they decide to take their zoo experience online.
+
+Users are able to signup / login. Browse through the exhibits, species and animals. They can make a donation to help the conservation of a species.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
