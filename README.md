@@ -10,6 +10,9 @@ To use this app, just clone, run 'rails db:migrate', run 'rails db:seed' and the
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/IgoVeyner/central_park_zoo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
 
+## License
+The app is available as open source under the terms of the MIT License. https://opensource.org/licenses/MIT
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
