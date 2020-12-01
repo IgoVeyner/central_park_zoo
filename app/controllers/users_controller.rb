@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   end
 
   def zookeepers
-    @zookeepers = User.zookeepers
+    @zookeepers = User.zookeepers.order(name: :desc)
   end
 
   private
