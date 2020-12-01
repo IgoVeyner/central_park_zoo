@@ -11,6 +11,8 @@ class User < ApplicationRecord
   validates :birthdate, presence: true
   validate :birthdate_cannot_be_in_the_future
 
+  scope :zookeepers, -> { where(admin: true)}
+
   def birthdate_cannot_be_in_the_future
     if birthdate > Date.today
       errors.add(:birthdate, "can't be in the future")

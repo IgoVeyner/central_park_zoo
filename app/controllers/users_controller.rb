@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   end
 
   def zookeepers
-    @zookeepers = User.where("admin = true")
+    @zookeepers = User.zookeepers
   end
 
   private
