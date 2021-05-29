@@ -7,15 +7,18 @@ class Donation < ApplicationRecord
   validates :comment, length: { maximum: 300 }
 
   def add_donation
-    if user.funds >= amount
-      new_user_finds = user.funds - amount
-      new_species_donation_total = species.donation_total + amount
-      user.update(funds: new_user_finds)
-      species.update(donation_total: new_species_donation_total)
-      "Thanks for donating $#{amount} to #{species.name}"
-    else
-      "Sorry, you do not have enough funds to donate. Your funds: $#{user.funds}"
-    end
+    new_user_finds = user.funds - amount
+    new_species_donation_total = species.donation_total + amount
+    user.update(funds: new_user_finds)
+    species.update(donation_total: new_species_donation_total)
   end
   
+  def valid
+    "Thanks for donating $#{amount} to #{species.name}"
+  end
+
+  def invalid
+    "Sorry, you do not have enough funds to donate. Your funds: $#{user.funds}"
+  end
+
 end

@@ -13,6 +13,10 @@ class User < ApplicationRecord
 
   scope :zookeepers, -> { where(admin: true)}
 
+  def has_enough_funds(num)
+    funds >= num ? true : false
+  end
+
   def birthdate_cannot_be_in_the_future
     if birthdate > Date.today
       errors.add(:birthdate, "can't be in the future")

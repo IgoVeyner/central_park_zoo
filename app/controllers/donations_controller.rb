@@ -11,16 +11,13 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
     @donation.user = current_user
 
-    if @donation.save 
-      message = @donation.add_donation
-      flash[:message] = message
-
-      if message.include?("Sorry")
-        render :new
-      else
-        redirect_to user_path(current_user)
-      end
+    if @donation.user.has_enough_funds(@donation.amount)
+      @donation.save 
+      @donation.add_donation
+      flash[:message] = @donation.valid
+      redirect_to user_path(current_user)
     else 
+      flash[:message] = @donation.invalid
       render :new
     end
   end
